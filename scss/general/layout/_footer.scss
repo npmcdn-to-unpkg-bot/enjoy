@@ -1,0 +1,30 @@
+footer {
+	padding: 16px 0 13px;
+		font-size: 14px;
+	.row > div {
+		float: none;
+			text-align: center;
+	}
+	p, a {
+		margin: 6px 0;
+			color: #5e5e5e;
+			text-decoration: none;
+	}
+
+	@media #{$xxx_mobile-up} {						// 641
+		padding: 16px 0;
+		.row > div {
+			width: 50%;
+			float: left;
+			&.copyring {
+				text-align: left;
+			}
+			&.developer {
+				text-align: right;
+			}
+		}
+		p, a {
+			margin: 16px 0;
+		}
+	}
+}

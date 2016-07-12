@@ -1,0 +1,344 @@
+{
+	"category": {
+		"item": [
+			{
+				"class": "",
+				"image": "pictures/img.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "",
+				"image": "pictures/img3.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "",
+				"image": "pictures/img4.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "",
+				"image": "pictures/img5.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "big-image",
+				"image": "pictures/img2.jpg",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "small-image",
+				"image": "pictures/img2.jpg",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "",
+				"image": "pictures/img3.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "",
+				"image": "pictures/img.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			}
+		]
+	},
+
+	"project": {
+		"item": [
+			{
+				"class": "standard",
+				"image": "pictures/img4.jpg",
+				"text": "" 
+			},
+			{
+				"class": "text",
+				"image": "",
+				"text": "Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку, перевернувши її на бік."
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img5.jpg",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img8.jpg",
+				"text": ""
+			},
+			{
+				"class": "big",
+				"image": "pictures/img7.jpg",
+				"text": ""
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img6.jpg",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "pictures/img9.jpg",
+				"text": "Комфортне місце для сидіння, можна використовувати і як подушку, перевернувши її на бік."
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img5.jpg",
+				"text": ""
+			}
+		],
+
+		"accessories": {
+			"item": [
+				{
+					"class": "",
+					"image": "pictures/img6.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				},
+				{
+					"class": "",
+					"image": "pictures/img7.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				},
+				{
+					"class": "",
+					"image": "pictures/img8.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				}
+			]
+		}
+	},
+
+	"project-materials": {
+		"item-materials": [
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/1.jpg"
+			},
+			{
+				"name": "Тканина 2",
+				"image": "pictures/materials/2.jpg"
+			},
+			{
+				"name": "Тканина 3",
+				"image": "pictures/materials/3.jpg"
+			},
+			{
+				"name": "Тканина 4",
+				"image": "pictures/materials/4.jpg"
+			},
+			{
+				"name": "Тканина 4",
+				"image": "pictures/materials/5.jpg"
+			},
+			{
+				"name": "Тканина 4",
+				"image": "pictures/materials/6.jpg"
+			},
+			{
+				"name": "Тканина 4",
+				"image": "pictures/materials/7.jpg"
+			},
+			{
+				"name": "Тканина 4",
+				"image": "pictures/materials/8.jpg"
+			}
+		],
+		"item-colors": [
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/1.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/2.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/3.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/5.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/6.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/4.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/8.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/7.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/1.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/3.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/5.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/2.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/4.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/8.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/6.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/7.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/5.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/2.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/6.jpg"
+			},
+			{
+				"name": "Тканина 1",
+				"image": "pictures/materials/4.jpg"
+			}
+		]
+	},
+
+	"small-colors": [
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": "active"
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		},
+		{
+			"color": "",
+			"class": ""
+		}
+	],
+
+	"size-items": [
+		{
+			"image": "pictures/img9.png",
+			"size-1": "L",
+			"size-2": "176 - 180",
+			"width": "70",
+			"height": "90"
+		},
+		{
+			"image": "pictures/img10.png",
+			"size-1": "L",
+			"size-2": "176 - 180",
+			"width": "70",
+			"height": "90"
+		}
+	]
+}

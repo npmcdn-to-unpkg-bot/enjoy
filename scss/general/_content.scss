@@ -1,0 +1,44 @@
+// row general style ------------------------------------------------------------ //
+.row {
+	//outline: 1px solid rgba(134, 134, 134, 0.4);
+	max-width: 300px;
+	@media #{$mobile-up} {							// 0
+		max-width: 300px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$x_mobile-up} {						// 385
+		max-width: 360px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$xx_mobile-up} {						// 481
+		max-width: 460px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$xxx_mobile-up} {						// 641
+		max-width: 620px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$tablet-up} {							// 854
+		max-width: 840px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$x_tablet-up} {						// 1025
+		max-width: 1000px;
+		&.max-none { max-width: none; }
+	}
+	@media #{$monitor-up} {							// 1261
+		max-width: 1260px;
+		&.max-none { max-width: none; }
+		.row { max-width: 1240px; margin: 0 auto; }
+	}
+	@media #{$x_monitor-up} {						// 1441
+		max-width: 1440px;
+		&.max-none { max-width: none; }
+		.row { max-width: 1240px; margin: 0 auto; }
+	}
+	@media #{$xx_monitor-up} {						// 1681
+		max-width: 1640px;
+		&.max-none { max-width: none; }
+		.row { max-width: 1240px; margin: 0 auto; }
+	}
+}
