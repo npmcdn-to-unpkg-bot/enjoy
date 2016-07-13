@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                 files: {
                     'app/js/build/index.min.js':
                     [
-                        'bower_components/jquery/dist/jquery.min.js',
+                        'bower_components/jquery/jquery.min.js',
                         'app/js/vendor/helpers.js',
                         'bower_components/mustache/mustache.js',
                         'bower_components/masonry/dist/masonry.pkgd.min.js',

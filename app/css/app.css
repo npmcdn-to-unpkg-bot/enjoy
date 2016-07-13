@@ -1625,6 +1625,7 @@ footer {
         margin: 16px 0; } }
 
 .project {
+  overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .show-materials .project {
@@ -1637,6 +1638,11 @@ footer {
     @media only screen and (min-width:854px) {
       .project > div {
         margin: 220px auto; } }
+  .project #webgl-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
   .project .constructor {
     margin-top: 0; }
     .project .constructor .images-wrapper .small-images {
@@ -1977,61 +1983,63 @@ footer {
   @media only screen and (min-width:1681px) {
     .project .gallery-items .items-wrapper {
       font-size: 16px; } }
-  .project .guarantee .text-wrapper {
-    text-align: center; }
-    .project .guarantee .text-wrapper .description {
-      margin: 62px 0 72px 0; }
-      .project .guarantee .text-wrapper .description p {
-        margin: 0;
-        font-size: 18px;
-        color: #5e5e5e;
-        text-align: center;
-        font-weight: 300;
-        line-height: 140%; }
-      .project .guarantee .text-wrapper .description span {
-        margin: 24px auto; }
-        .project .guarantee .text-wrapper .description span.str {
-          width: 44px;
-          height: 10px;
-          background: url(../img/str.png) no-repeat center; }
-        .project .guarantee .text-wrapper .description span.plus {
-          width: 19px;
-          height: 18px;
-          background: url(../img/plus.png) no-repeat center; }
+  .project .guarantee {
+    position: relative; }
+    .project .guarantee .text-wrapper {
+      text-align: center; }
+      .project .guarantee .text-wrapper .description {
+        margin: 62px 0 72px 0; }
+        .project .guarantee .text-wrapper .description p {
+          margin: 0;
+          font-size: 18px;
+          color: #5e5e5e;
+          text-align: center;
+          font-weight: 300;
+          line-height: 140%; }
+        .project .guarantee .text-wrapper .description span {
+          margin: 24px auto; }
+          .project .guarantee .text-wrapper .description span.str {
+            width: 44px;
+            height: 10px;
+            background: url(../img/str.png) no-repeat center; }
+          .project .guarantee .text-wrapper .description span.plus {
+            width: 19px;
+            height: 18px;
+            background: url(../img/plus.png) no-repeat center; }
+        .project .guarantee .text-wrapper .description > * {
+          display: block; }
+      .project .guarantee .text-wrapper .order {
+        display: inline-block; }
+    .project .guarantee .image-wrapper .image {
+      margin: 80px 0 0 0;
+      width: 100%;
+      padding-top: 100%;
+      background-position: center !important;
+      background-size: contain !important; }
+    @media only screen and (min-width:641px) {
       .project .guarantee .text-wrapper .description > * {
-        display: block; }
-    .project .guarantee .text-wrapper .order {
-      display: inline-block; }
-  .project .guarantee .image-wrapper .image {
-    margin: 80px 0 0 0;
-    width: 100%;
-    padding-top: 100%;
-    background-position: center !important;
-    background-size: contain !important; }
-  @media only screen and (min-width:641px) {
-    .project .guarantee .text-wrapper .description > * {
-      display: inline-block;
-      vertical-align: middle; }
-    .project .guarantee .text-wrapper .description span {
-      margin: 0 24px; }
-    .project .guarantee .image-wrapper .image {
-      padding-top: 70%; } }
-  @media only screen and (min-width:854px) {
-    .project .guarantee .image-wrapper .image {
-      padding-top: 50%; } }
-  @media only screen and (min-width:1261px) {
-    .project .guarantee {
-      padding: 60px 0 0 0; }
-      .project .guarantee .text-wrapper {
-        position: absolute;
-        top: 0;
-        left: 8px; }
+        display: inline-block;
+        vertical-align: middle; }
+      .project .guarantee .text-wrapper .description span {
+        margin: 0 24px; }
       .project .guarantee .image-wrapper .image {
-        max-width: 50%;
-        float: right;
-        margin: -60px 0 0 -16px;
-        padding-top: 50%;
-        background-position: center right !important; } }
+        padding-top: 70%; } }
+    @media only screen and (min-width:854px) {
+      .project .guarantee .image-wrapper .image {
+        padding-top: 50%; } }
+    @media only screen and (min-width:1261px) {
+      .project .guarantee {
+        padding: 60px 0 0 0; }
+        .project .guarantee .text-wrapper {
+          position: absolute;
+          top: 0;
+          left: 8px; }
+        .project .guarantee .image-wrapper .image {
+          max-width: 50%;
+          float: right;
+          margin: -60px 0 0 -16px;
+          padding-top: 50%;
+          background-position: center right !important; } }
   .project .sizes {
     padding: 46px 0 32px 0; }
     .project .sizes .content {
