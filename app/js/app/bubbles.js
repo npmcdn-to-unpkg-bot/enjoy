@@ -33,7 +33,7 @@
         winHalfX = width / 2;
         fieldOfView = 75;
         aspectRatio = width / height;
-        nearPlane = 250;
+        nearPlane = 50;
         farPlane = 2000;
         cameraZ = 850;
 
@@ -45,7 +45,8 @@
         //lights (no lights!) camera, action!
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
-        camera.position.y = 100;
+        camera.position.y = 200;
+        camera.position.x = 100;
 
         // aaaaaaaaand scene! (No wait, we're not done!)
         // aaaaaaaaand ten more minutes.
@@ -53,7 +54,7 @@
 
         //material settings
         spriteOpts = {
-            color: 0xcccccc,
+            color: 0xCCCCCC,
             program: function(ctx) {
                 ctx.beginPath();
                 ctx.arc(0, 0, 0.5, 0, Tau, true);
@@ -130,14 +131,14 @@
 
             for (var iy = 0, ly = amtY; iy < ly; iy++) {
                 particle = particles[i++];
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 30) + (Math.sin((iy + count) * 0.5) * 30);
-                particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1.5 ) * 2 + (Math.sin((iy + count) * 0.5) + 1.5 ) * 2;
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 35) + (Math.sin((iy + count) * 0.5) * 35);
+                particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 2 ) * 1.5 + (Math.sin((iy + count) * 0.5) + 2 ) * 1.5;
                 scene.add(particle);
             }
         }
 
         renderer.render(scene, camera);
-        count += 0.1;
+        count += 0.05;
     }
 
     document.addEventListener('DOMContentLoaded', onDocumentReady);
