@@ -1589,7 +1589,7 @@ html, body {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #5e5e5e; }
+  color: #989898; }
 
 body > * {
   -webkit-transition: opacity 0.5s;
@@ -1648,32 +1648,24 @@ footer {
         display: inline-block;
         padding: 0 16px; }
         .project .constructor .images-wrapper .small-images > div > div {
+          opacity: 0.4;
           position: relative;
           display: table-cell;
           vertical-align: middle; }
-          .project .constructor .images-wrapper .small-images > div > div:after {
-            display: none;
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 80px;
-            height: 80px;
-            border: 2px solid #dadada;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-          .project .constructor .images-wrapper .small-images > div > div.active:after {
-            display: block; }
+          .project .constructor .images-wrapper .small-images > div > div.active {
+            opacity: 1; }
           .project .constructor .images-wrapper .small-images > div > div img {
             cursor: pointer; }
-    .project .constructor .images-wrapper .home-image > div img {
-      max-height: 600px;
-      display: block;
-      margin: 40px auto; }
+    .project .constructor .images-wrapper .home-image > div {
+      text-align: center; }
+      .project .constructor .images-wrapper .home-image > div img {
+        max-height: 600px;
+        height: auto;
+        display: block;
+        margin: 40px auto; }
     .project .constructor .property .name {
       margin: 0;
-      color: #5e5e5e;
+      color: #989898;
       font-size: 16px;
       font-weight: 300;
       line-height: 180%; }
@@ -1762,7 +1754,7 @@ footer {
           font-weight: 400;
           line-height: 38px;
           text-align: center;
-          color: #5e5e5e; }
+          color: #989898; }
           .project .constructor .property .small-sizes .size-1 > span:last-child {
             margin: 0; }
           .project .constructor .property .small-sizes .size-1 > span:hover {
@@ -1777,7 +1769,7 @@ footer {
           vertical-align: middle;
           display: inline-block;
           font-size: 16px;
-          color: #5e5e5e; }
+          color: #989898; }
           .project .constructor .property .small-sizes .size-2 > div.height {
             padding: 0 0 0 13px;
             background: url(../img/small-height.png) no-repeat center left; }
@@ -1797,7 +1789,12 @@ footer {
           vertical-align: middle; }
         .project .constructor .property .small-sizes .price-wrapper .price {
           display: block;
-          margin: 0 0 40px 0; }
+          margin: 0 0 40px 0;
+          font-size: 16px;
+          color: #5c267f;
+          font-weight: 400; }
+          .project .constructor .property .small-sizes .price-wrapper .price span {
+            font-size: 36px; }
         .project .constructor .property .small-sizes .price-wrapper .order {
           position: relative;
           top: -2px; }
@@ -1826,12 +1823,13 @@ footer {
       .project .constructor .images-wrapper {
         height: 600px;
         float: left;
-        width: 50%; }
+        width: 58%; }
         .project .constructor .images-wrapper .small-images {
           height: 600px;
           width: 100px;
           float: left;
-          display: block; }
+          display: block;
+          padding: 32px 0; }
           .project .constructor .images-wrapper .small-images > div {
             width: auto;
             height: 25%;
@@ -1853,7 +1851,7 @@ footer {
       .project .constructor .property {
         height: 600px;
         float: right;
-        width: 50%;
+        width: 42%;
         padding: 0 0 0 60px; }
         .project .constructor .property .name {
           font-size: 16px; }
@@ -1875,13 +1873,13 @@ footer {
             margin: 0 0 32px 0; } }
     @media only screen and (min-width:1261px) {
       .project .constructor .property {
-        padding: 0 0 0 110px; }
+        padding: 0 0 0 70px; }
         .project .constructor .property .name {
           font-size: 24px; }
           .project .constructor .property .name span {
             font-size: 48px; }
         .project .constructor .property .choice-material {
-          margin: 110px 0 100px 20px; }
+          margin: 120px 0 110px 20px; }
         .project .constructor .property .small-sizes .size-1 {
           width: 40%;
           display: inline-block;
@@ -1892,7 +1890,7 @@ footer {
           display: inline-block;
           vertical-align: middle; }
         .project .constructor .property .small-sizes .price-wrapper {
-          margin: 64px 0 0 0; }
+          margin: 72px 0 0 0; }
           .project .constructor .property .small-sizes .price-wrapper .price {
             margin: 0 56px 0 0;
             display: inline-block; } }
@@ -1938,7 +1936,6 @@ footer {
           width: 100%;
           padding: 0 3em;
           font-size: 1.25em;
-          color: #5e5e5e;
           font-weight: 300;
           line-height: 160%; }
           .project .gallery-items .items-wrapper .item .wrapper .text-wrapper p {
@@ -1984,7 +1981,6 @@ footer {
       .project .guarantee .text-wrapper .description p {
         margin: 0;
         font-size: 18px;
-        color: #5e5e5e;
         text-align: center;
         font-weight: 300;
         line-height: 140%; }
@@ -2062,7 +2058,6 @@ footer {
         margin: 0;
         position: absolute;
         top: -46px;
-        color: #5e5e5e;
         font-weight: 300; }
         .project .sizes .content .description span {
           margin: 0 16px 0 0;
@@ -2082,7 +2077,6 @@ footer {
         position: absolute;
         text-align: center;
         font-size: 16px;
-        color: #5e5e5e;
         font-weight: 300; }
       .project .sizes .content .width {
         left: 50%;
