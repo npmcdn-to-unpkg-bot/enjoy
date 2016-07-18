@@ -16,7 +16,7 @@
 	// start! ----------------------------------------------------------------------------------------- //
 	window.addEventListener && window.addEventListener('DOMContentLoaded', function(){
 		document.body.className += ' dom-loaded';
-	});
+	}); 
 
 	// show site -------------------------------------------------------------------------------------- //
 	window.addEventListener && window.addEventListener('load', function(){
@@ -33,7 +33,7 @@
 		if($('body').hasClass('project-page')) {
 			closeScroll(); 		// блокувати скрол
 			openMaterial();		// відкрити лист матеріалів
-			numColorsElem(); 	// позиціонування елементів листа матеріалів
+			numColorsElem();
 			chooseSize(); 		// вибір розміру
 			chooser(); 			// 
 			if(!isMobile) {
@@ -65,6 +65,12 @@
 					}
 				})
 			}
+
+			// parralax
+			var sceneHomePage = document.getElementById('waves');
+			var parallax = new Parallax(waves, {
+				scalarY: 20
+			});
 		}
 
 
@@ -171,9 +177,10 @@
 		});
 	};
 
+	// позиціонування колір малий
 	function numColorsElem() {
 		var i,
-			elem = $('.project .choice-material .colors-wrapper span'),
+			elem = $('.project .choice-material .colors-wrapper > div'),
 			num = elem.length,
 			calc = 180/num*2;
 		var fixedNum = calc;
@@ -209,27 +216,22 @@
 			};
 		});
 
-		// вибір кольору на превюшці
-		var elem = $('.project .choice-material .colors-wrapper span span');
-		elem.on('click', function() {
-			elem.removeClass('active');
-			$(this).addClass('active');
-		});
-
-		// вибір матеріалу в попапі
-		$('.materials-wrapper .materials .item').on('click', function() {
-			$('.materials-wrapper .materials .item').removeClass('active');
+		// вибір матеріалу та кольору в попапі
+		$('.materials-wrapper .wrapper .item').on('click', function() {
+			$(this).parents('.wrapper').find('.item').removeClass('active');
+			//$('.materials-wrapper .materials .item').removeClass('active');
 			$(this).addClass('active');
 			var material = $(this).attr('data-img');
 			$('.project .elect-materials').css('background', 'url(' + material + ')');
 		});
 
-		// вибір кольору в попапі
-		$('.materials-wrapper .colors .item').on('click', function() {
+		// синхронізація вибору кольору
+		$('.materials-wrapper .colors .item, .project .choice-material .colors-wrapper div span').on('click', function() {
+			var dataItem =  $(this).attr('data-item');
+			$('.project .choice-material .colors-wrapper div span').removeClass('active');
 			$('.materials-wrapper .colors .item').removeClass('active');
-			$(this).addClass('active');
-			var material = $(this).attr('data-img');
-			$('.project .elect-materials').css('background', 'url(' + material + ')');
+			$('.project .choice-material .colors-wrapper div span[data-item=' + dataItem + ']').addClass('active');
+			$('.materials-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
 		});
 
 		// закрити попап

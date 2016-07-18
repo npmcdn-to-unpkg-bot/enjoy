@@ -40,5 +40,6 @@
 		max-width: 1640px;
 		&.max-none { max-width: none; }
 		.row { max-width: 1240px; margin: 0 auto; }
+		.row.extended { max-width: 1410px; margin: 0 auto; }
 	}
 }

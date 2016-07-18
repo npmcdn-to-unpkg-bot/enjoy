@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                 files: {
                     'app/js/build/index.min.js':
                     [
-                        'bower_components/jquery/dist/jquery.min.js',
+                        'bower_components/jquery/jquery.min.js',
                         'app/js/vendor/helpers.js',
                         'bower_components/mustache/mustache.js',
                         'bower_components/masonry/dist/masonry.pkgd.min.js',
@@ -80,6 +80,7 @@ module.exports = function (grunt) {
                         'app/js/vendor/jquery.elevatezoom.js',
                         'app/js/vendor/jquery.parallax.js',
                         'bower_components/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js',
+                        'app/js/vendor/parallax.js',
                         'app/js/app/bubbles.js',
                         'app/js/app/app.js'
                     ]

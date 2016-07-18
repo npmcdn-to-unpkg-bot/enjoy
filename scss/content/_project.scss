@@ -1,5 +1,5 @@
 .project {
-
+	overflow: hidden;
 	transition: all .3s ease;
 	.show-materials & {
 		transition: all .6s ease;
@@ -94,7 +94,7 @@
 						width: calc(100% + 40px);
 						height: calc(100% + 40px);
 						transform: translate(-50%, -50%);
-						> span {
+						> div {
 							position: absolute;
 							top: 0;
 							left: 50%;
@@ -102,11 +102,13 @@
 							height: 50%;
 							margin: 0 0 0 -8px;
 							transform-origin: bottom center;
+							p {
+								display: none;
+							}
 							> span {
 								position: absolute;
 								width: 100%;
 								height: 16px;
-								background: red !important;
 								border-radius: 100%;
 								cursor: pointer;
 								&:after {
@@ -204,7 +206,7 @@
 					}
 					.order {
 						position: relative;
-						top: -2px;
+						top: 0;
 					}
 				}
 			}
@@ -266,7 +268,7 @@
 					width: calc(100% - 100px);
 					float: right;
 					display: table;
-					padding: 0 0 0 56px;
+					//padding: 0 0 0 56px;
 					> div {
 						display: table-cell;
 						vertical-align: middle;
@@ -321,7 +323,7 @@
 					}
 				}
 				.choice-material {
-					margin: 120px 0 110px 20px;
+					margin: 105px 0 105px 20px;
 				}
 				.small-sizes {
 					.size-1 {
@@ -349,7 +351,10 @@
 
 	// gallery items
 	.gallery-items {
+		//color: #fff;
 		.items-wrapper {
+			//background: $color-1;
+			background: #fff;
 			overflow: hidden;
 			width: 100%;
 				font-size: 12px;
@@ -370,7 +375,6 @@
 					display: none;
 				}
 				&.text {
-					background: rgba(0, 0, 0, 0.018);
 					.wrapper .image {
 						display: none;
 					}
@@ -464,6 +468,26 @@
 
 	// guarantee
 	.guarantee {
+		position: relative;
+		#webgl-container {
+			position: absolute;
+			top: 120px;
+			left: 0;
+			z-index: -1;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 140px;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,0+23,0.5+53,1+86,1+100 */
+				background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 23%, rgba(255,255,255,0.5) 53%, rgba(255,255,255,1) 86%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 23%,rgba(255,255,255,0.5) 53%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 23%,rgba(255,255,255,0.5) 53%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+			}
+		}
 		.text-wrapper {
 			text-align: center;
 			.description {
@@ -498,11 +522,29 @@
 		}
 		.image-wrapper {
 			.image {
+				animation: waves 6s infinite;
+				position: relative;
 				margin: 80px 0 0 0;
 				width: 100%;
 				padding-top: 100%;
 				background-position: center !important;
 				background-size: contain !important;
+				&:after {
+					animation: waves_shadow 6s infinite;
+					content: '';
+					position: absolute;
+					bottom: -240px;
+					left: 50%;
+					width: 600px;
+					height: 300px;
+					transform: translateX(-50%) scaleY(0.15);
+					filter: blur(10px);
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+49,0+100 */
+					background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 49%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+					background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 49%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: radial-gradient(ellipse at center,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 49%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+				}
 			}
 		}
 
@@ -533,6 +575,9 @@
 		}
 		@media #{$monitor-up} {							// 1261
 			padding: 60px 0 0 0;
+			#webgl-container {
+				top: -60px;
+			}
 			.text-wrapper {
 				position: absolute;
 				top: 0;
@@ -540,12 +585,107 @@
 			}
 			.image-wrapper {
 				.image {
-					max-width: 50%;
+					max-width: 52%;
 					float: right;
 					margin: -60px 0 0 -16px;
 					padding-top: 50%;
-					background-position: center right !important;
+					background-position: bottom center !important;
 				}
+			}
+		}
+		@media #{$xx_monitor-up} {						// 1681
+			#webgl-container {
+				top: -30px;
+			}
+		}
+	}
+
+	// waves
+	.waves-wrapper {
+		position: relative;
+		height: 400px;
+			font-size: 6px;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 1000px;
+			background: #fff;
+		}
+		//outline: 1px solid red;
+		.text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			//margin: 140px 0 0 -484px;
+		}
+		> div {
+			overflow: hidden;
+			height: 100%;
+		}
+		.image {
+			position: absolute !important;
+			bottom: 0;
+			left: 50% !important;
+			top: auto !important;
+			margin: 0 0 em(16px,-140px) em(16px,-960px);
+			height: em(16px,400px);
+			width: em(16px,1920px);
+			pointer-events: none;
+			img {
+				display: block;
+				margin: 0 auto;
+				width: em(16px,1920px);
+			}
+			&.waves-1 {
+				z-index: 1;
+			}
+			&.waves-2 {
+				z-index: 3;
+			}
+			&.waves-3 {
+				z-index: 4;
+			}
+			&.girls {
+				z-index: 2;
+				img {
+					width: em(16px,1152px);
+					margin-top: em(16px,-390px);
+					transform: translate(em(16px,80px), 0px);
+				}
+			}
+			&.girls-2 {
+				z-index: 4;
+				img {
+					margin-top: em(16px,-390px);
+				}
+			}
+		}
+
+		@media #{$xx_mobile-up} {						// 481
+			height: 450px;
+				font-size: 8px;
+		}
+		@media #{$xxx_mobile-up} {						// 641
+			height: 550px;
+				font-size: 10px;
+		}
+		@media #{$tablet-up} {							// 854
+			height: 600px;
+				font-size: 12px;
+		}
+		@media #{$x_tablet-up} {						// 1025
+			height: 700px;
+				font-size: 14px;
+		}
+		@media #{$monitor-up} {							// 1261
+			height: 750px;
+				font-size: 16px;
+			.text {
+				margin: 120px 0 0 -330px;
 			}
 		}
 	}
@@ -771,7 +911,7 @@
 
 		@media #{$tablet-up} {							// 854
 			.items-wrapper {
-				margin: 120px 0 0 0;
+				margin: 110px 0 0 0;
 			}
 		}
 	}

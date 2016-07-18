@@ -165,90 +165,111 @@
 				"name": "Тканина 4",
 				"image": "pictures/materials/8.jpg"
 			}
-		],
-		"item-colors": [
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/1.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/2.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/3.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/5.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/6.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/4.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/8.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/7.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/1.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/3.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/5.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/2.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/4.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/8.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/6.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/7.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/5.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/2.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/6.jpg"
-			},
-			{
-				"name": "Тканина 1",
-				"image": "pictures/materials/4.jpg"
-			}
 		]
 	},
+
+	"item-colors": [
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-1"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/2.jpg",
+			"number": "item-2"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-3"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/5.jpg",
+			"number": "item-4"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/6.jpg",
+			"number": "item-5"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-6"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/8.jpg",
+			"number": "item-7"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/7.jpg",
+			"number": "item-8"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-9"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-10"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/5.jpg",
+			"number": "item-11"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/2.jpg",
+			"number": "item-12"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-13"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/8.jpg",
+			"number": "item-14"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/6.jpg",
+			"number": "item-15"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/7.jpg",
+			"number": "item-16"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/5.jpg",
+			"number": "item-17"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/2.jpg",
+			"number": "item-18"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/6.jpg",
+			"number": "item-19"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-20"
+		}
+	],
 
 	"small-colors": [
 		{

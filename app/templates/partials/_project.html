@@ -23,7 +23,7 @@
 			<div class="wrapper owl-colors">
 				{{#item-colors}}
 				<div>
-					<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}"></span>
+					<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
 					<p>{{{name}}}</p>
 				</div>
 				{{/item-colors}}
@@ -39,7 +39,7 @@
 	<div class="constructor">
 		<div class="row">
 			<div class="columns large-12">
-				<div class="row">
+				<div class="row extended">
 					<div class="columns large-12 clearfix">
 						<div class="images-wrapper clearfix">
 							<div class="small-images">
@@ -60,11 +60,12 @@
 								<div class="wrapper">
 									<div class="elect-materials" style="background:url('pictures/materials/6.jpg') no-repeat center"></div>
 									<div class="colors-wrapper">
-										{{#small-colors}}
-										<span>
-											<span class="{{{class}}}" style="background:url('{{{color}}}') no-repeat center"></span>
-										</span>
-										{{/small-colors}}
+										{{#item-colors}}
+										<div>
+											<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
+											<p>{{{name}}}</p>
+										</div>
+										{{/item-colors}}
 									</div>
 								</div>
 							</div>
@@ -130,9 +131,31 @@
 						<a href="#" class="order">Замовити</a>
 					</div>
 					<div class="image-wrapper clearfix">
-						<div class="image" style="background:url('pictures/img12.png') no-repeat;"></div>
+						<div class="image" style="background:url('pictures/img13.png') no-repeat;"></div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- waves -->
+	<div class="row max-none waves-wrapper" id="waves">
+		<div class="columns large-12">
+			<h2 class="text">Можна плюхкатись</h2>
+			<div class="layer image waves waves-1" data-depth="0.05">
+				<img src="img/waves/waves1.png" alt="">
+			</div>
+			<div class="layer image waves waves-2" data-depth="0.2">
+				<img src="img/waves/waves2.png" alt="">
+			</div>
+			<div class="layer image waves waves-3" data-depth="0.45">
+				<img src="img/waves/waves3.png" alt="">
+			</div>
+			<div class="layer image girls girls-1" data-depth="0.12">
+				<img src="img/waves/girls1.png" alt="">
+			</div>
+			<div class="layer image girls girls-2" data-depth="0.12">
+				<img src="img/waves/girls2.png" alt="">
 			</div>
 		</div>
 	</div>
@@ -140,7 +163,7 @@
 	<!-- sizes -->
 	<div class="row sizes">
 		<div class="columns large-12">
-			<div class="row">
+			<div class="row extended">
 				<div class="columns large-12">
 					<div class="content clearfix">
 						{{#size-items}}

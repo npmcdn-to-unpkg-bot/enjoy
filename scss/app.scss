@@ -33,3 +33,32 @@ $pictpath: "../pictures/";
 @import 'content/category';
 
 
+@keyframes waves {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(30px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes waves_shadow {
+	0% {
+		transform: translateY(0px) translateX(-50%) scaleY(0.15);
+		opacity: 0.02;
+	}
+	50% {
+		transform: translateY(-60px) translateX(-50%) scaleY(0.15);
+		opacity: 0.1;
+	}
+	100% {
+		transform: translateY(0px) translateX(-50%) scaleY(0.15);
+		opacity: 0.02;
+	}
+}
+
+
+
+
