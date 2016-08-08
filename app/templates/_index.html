@@ -11,12 +11,19 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="home-page">
 	
+	{{ > header }}
+
+	<!-- interactive -->
+	<div class="interactive">
+		{{ > interactive/home }}
+	</div>
+
 	{{ > home }}
 	{{ > footer }}
 
-    <script src="js/build/index.min.js"></script>   
+    <script src="js/build/index.min.js"></script>
     
     <script src='//localhost:3000/socket.io/socket.io.js'></script>
     <script src='//localhost:3001/client/browser-sync-client.min.js'></script>

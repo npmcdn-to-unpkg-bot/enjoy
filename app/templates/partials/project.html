@@ -3,16 +3,30 @@
 <br>
 <br>
 <br>
-<div class="materials-wrapper">
+<br>
+<div class="main-home">
+	<div class="row">
+		<div class="columns large-12">
+			<p>step 1. the most important step of the project</p>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- materials wrapper -->
+<div class="elements-wrapper">
 	<div>
-		{{#project-materials}}
 		<div class="materials">
 			<p class="title">Оберіть матеріал</p>
-			<div class="close"></div>
-			<div class="wrapper owl-materials">
+			<div class="wrapper owl-materials clearfix">
 				{{#item-materials}}
 				<div>
-					<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}"></span>
+					<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
 					<p>{{{name}}}</p>
 				</div>
 				{{/item-materials}}
@@ -20,7 +34,7 @@
 		</div>
 		<div class="colors">
 			<p class="title">Оберіть колір</p>
-			<div class="wrapper owl-colors">
+			<div class="wrapper owl-colors clearfix">
 				{{#item-colors}}
 				<div>
 					<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
@@ -29,9 +43,11 @@
 				{{/item-colors}}
 			</div>
 		</div>
-		{{/project-materials}}
+		<span class="close">Застосувати</span>
 	</div>
 </div>
+
+<!-- project container -->
 <div class="project">
 	{{#project}}
 
@@ -41,6 +57,8 @@
 			<div class="columns large-12">
 				<div class="row extended">
 					<div class="columns large-12 clearfix">
+
+						<!-- image -->
 						<div class="images-wrapper clearfix">
 							<div class="small-images">
 								<div><div class="active"><img class="item" src="pictures/img5.png" alt="" data-img="pictures/img5.png"></div></div>
@@ -54,18 +72,37 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- property -->
 						<div class="property">
 							<h1 class="name">Крісло-груша<span>Original Quadro</span></h1>
-							<div class="choice-material">
-								<div class="wrapper">
-									<div class="elect-materials" style="background:url('pictures/materials/6.jpg') no-repeat center"></div>
-									<div class="colors-wrapper">
-										{{#item-colors}}
-										<div>
-											<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
-											<p>{{{name}}}</p>
+							<div class="choice-wrapper clearfix">
+								<div class="choice-material">
+									<p class="title">Матеріал</p>
+									<div class="wrapper">
+										<div class="elect elect-materials" style=""></div>
+										<div class="rainbow rainbow-materials">
+											{{#item-materials}}
+											<div>
+												<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
+												<p>{{{name}}}</p>
+											</div>
+											{{/item-materials}}
 										</div>
-										{{/item-colors}}
+									</div>
+								</div>
+								<div class="choice-color">
+									<p class="title">Колір</p>
+									<div class="wrapper">
+										<div class="elect elect-colors" style=""></div>
+										<div class="rainbow rainbow-colors">
+											{{#item-colors}}
+											<div>
+												<span class="item" style="background:url('{{{image}}}') no-repeat center" data-img="{{{image}}}" data-item="{{{number}}}"></span>
+												<p>{{{name}}}</p>
+											</div>
+											{{/item-colors}}
+										</div>
 									</div>
 								</div>
 							</div>
@@ -86,13 +123,14 @@
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- gallery items -->
+	<!-- gallery -->
 	<div class="row max-none collapse gallery-items">
 		<div class="columns large-12">
 			<div class="items-wrapper">
@@ -103,6 +141,7 @@
 						<div>
 							<div class="image" style="background:url('{{{image}}}') no-repeat center"></div>
 							<div class="text-wrapper">
+								<h3>{{{title}}}</h3>
 								<p>{{{text}}}</p>
 							</div>
 						</div>
@@ -195,7 +234,7 @@
 	</div>
 
 	<!-- standard items -->
-	<div class="row max-none collapse standard-items accessories">
+	<div class="row max-none collapse offer-items accessories">
 		<div class="columns large-12">
 			<h2>Аксесуари</h2>
 			<div class="items-wrapper">
@@ -216,5 +255,6 @@
 			</div>
 		</div>
 	</div>
+
 	{{/project}}
 </div>

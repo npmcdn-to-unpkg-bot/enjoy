@@ -1,0 +1,48 @@
+.faq-page {
+
+	// issue
+	.issue {
+		.items-wrapper {
+			.item {
+				position: relative;
+				counter-increment: section;
+				margin: 0 0 64px 0;
+				padding: 0 0 0 54px;
+				max-width: 600px;
+				h3 {
+					margin: 0 0 16px 0;
+					color: $color-1;
+				}
+				&:after {
+					content: '0' counter(section);
+					position: absolute;
+					top: 0;
+					left: 0;
+					margin: 7px 0 0 0;
+					opacity: 0.3;
+						font-size: 32px;
+						font-weight: 300;
+				}
+				&:nth-child(n+10) {
+					&:after {
+						content: counter(section);
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$xx_mobile-up} {						// 481
+		.issue {
+			.items-wrapper {
+				.item {
+					padding: 0 0 0 96px;
+					&:after {
+						margin: 11px 0 0 0;
+							font-size: 48px;
+					}
+				}
+			}
+		}
+	}
+}

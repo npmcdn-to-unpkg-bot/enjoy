@@ -3,15 +3,20 @@ body {
 	height: 100%;
 }
 body {
-	font-family: $text;
-	color: $color-text-2;
+	padding: 80px 0 0 0;
+		font-family: $text;
+		color: $color-text-2;
+		line-height: 160%;
+	&.open-menu {
+		overflow: hidden;
+	}
 }
-body > * {
-	transition: opacity .5s;
-}
-body:not(.loaded) > * {
-	opacity: 0;
-}
+// body > * {
+// 	transition: opacity .5s;
+// }
+// body:not(.loaded) > * {
+// 	opacity: 0;
+// }
 
 a {
     outline: none !important;

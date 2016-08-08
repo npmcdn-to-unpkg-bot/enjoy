@@ -1,0 +1,87 @@
+<!-- enjoy -->
+<div class="enjoy">
+	<div class="wrapper">
+		<img src="img/big-logo.png" alt="" class="big-logo">
+		<div class="content">
+			<p class="item-1">преміум<br>матеріали</p>
+			<p class="item-2">виробництво по<br>власних лекалах</p>
+			<p class="item-3">вдосконалений<br>наповнювач</p>
+		</div>
+		<img src="img/big-chair.png" alt="" class="big-chair">
+	</div>
+</div>
+
+<!-- category -->
+<div class="home-category">
+	<div class="row max-none collapse">
+		<div class="columns large-12 items-wrapper">
+			
+			<div class="item item-1">
+				<p class="name">#accwssories</p>
+				<p class="text">Ми цінуємо твою індивідуальність.<br>Твій стиль набагато важливіший,<br>ніж мода</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+			<div class="item item-2">
+				<p class="name">#accwssories</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+			<div class="item item-3">
+				<p class="name">#accwssories</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+			<div class="item item-4">
+				<p class="name">#kids</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+			<div class="item item-5">
+				<p class="name">#for outdoor</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+			<div class="item item-6">
+				<p class="name">#for outdoor</p>
+				<div class="image"></div>
+				<div class="number"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- materials -->
+<div class="materials-home">
+	<div class="row">
+		<div class="columns large-12">
+			<p>materials. something about materials</p>
+		</div>
+	</div>
+</div>
+
+<!-- gallery -->
+<div class="row max-none collapse gallery-items">
+	<div class="columns large-12">
+		<div class="items-wrapper">
+			<div>
+				{{#home.item}}
+				<div class="item {{{class}}}">
+					<div class="wrapper">
+						<div>
+							<div class="image" style="background:url('{{{image}}}') no-repeat center"></div>
+							<div class="text-wrapper">
+								<div>
+									<h3>{{{title}}}</h3>
+									<p>{{{text}}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/home.item}}
+			</div>
+		</div>
+	</div>
+</div>

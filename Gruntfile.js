@@ -82,6 +82,7 @@ module.exports = function (grunt) {
                         'bower_components/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js',
                         'app/js/vendor/parallax.js',
                         'app/js/app/bubbles.js',
+                        'app/js/app/map.js',
                         'app/js/app/app.js'
                     ]
                 }
@@ -131,7 +132,7 @@ module.exports = function (grunt) {
             options: {
                 directory: 'app/templates/partials',
                 extension: '.html',
-                prefix: '_'
+                prefix: ''
             },
             all: { 
                 files: [
@@ -154,6 +155,26 @@ module.exports = function (grunt) {
                         data: 'app/templates/data/index.json',
                         template: 'app/templates/_project.html',
                         dest: 'app/project.html'
+                    },
+                    {
+                        data: 'app/templates/data/index.json',
+                        template: 'app/templates/_clients.html',
+                        dest: 'app/clients.html'
+                    },
+                    {
+                        data: 'app/templates/data/index.json',
+                        template: 'app/templates/_about.html',
+                        dest: 'app/about.html'
+                    },
+                    {
+                        data: 'app/templates/data/index.json',
+                        template: 'app/templates/_faq.html',
+                        dest: 'app/faq.html'
+                    },
+                    {
+                        data: 'app/templates/data/index.json',
+                        template: 'app/templates/_contacts.html',
+                        dest: 'app/contacts.html'
                     }
           ]
             },

@@ -1,0 +1,114 @@
+<!-- gallery items -->
+<div class="row max-none collapse gallery-items">
+	<div class="columns large-12">
+		<div class="items-wrapper">
+			<div>
+				{{#clients.item}}
+				<div class="item {{{class}}}">
+					<div class="wrapper">
+						<div>
+							<div class="image" style="background:url('{{{image}}}') no-repeat center"></div>
+							<div class="text-wrapper">
+								<div>
+									<h3>{{{title}}}</h3>
+									<p>{{{text}}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/clients.item}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- features -->
+<div class="features">
+	<div class="row">
+		<div class="columns large-12">
+			<h2>Особивість послуги</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns large-12 items-wrapper small-item">
+			<div class="item">
+				<img src="img/advant-1.png" alt="">
+				<h4>Облаштування<br>інтер’єру</h4>
+			</div>
+			<div class="item">
+				<img src="img/advant-1.png" alt="">
+				<h4>Розробка індивідуального<br>дизайну меблів</h4>
+			</div>
+			<div class="item">
+				<img src="img/advant-1.png" alt="">
+				<h4>Нанесення фірмового<br>логотипу чи тексту УФ друком</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- information -->
+<div class="information">
+	<div class="row">
+		<div class="columns large-12 items-wrapper small-item">
+			<div class="item">
+				<img src="img/ico-2.png" alt="">
+				<h4>Способи доставки</h4>
+				<p>Самовивіз з офісу компанії<br>
+				Доставка на відділення<br>
+				Кур’єрська доставка до дверей</p>
+			</div>
+			<div class="item">
+				<img src="img/ico-2.png" alt="">
+				<h4>Форми оплати</h4>
+				<p>Готівковий платіж<br>
+				Платіжний переказ на карту<br>
+				Оплата кур’єру при отриманні</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- partners -->
+<div class="partners">
+	<div class="row">
+		<div class="columns large-12">
+			<h2>Партнери</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-6 large-centered items-wrapper">
+			{{#clients.logos}}
+			<img src="{{{image}}}" alt="" class="item">
+			{{/clients.logos}}
+		</div>
+	</div>
+</div>
+
+<!-- consultation -->
+<div class="consultation">
+	<div class="row">
+		<div class="columns large-12">
+			<h2>Готові консультувати</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 items-wrapper">
+			{{#clients.consultation}}
+			<div class="item">
+				<div class="image" style="background:url({{{image}}}) no-repeat center"></div>
+				<div class="text">
+					<p class="name">{{{name}}}</p>
+					<p class="position">{{{position}}}</p>
+				</div>
+			</div>
+			{{/clients.consultation}}
+		</div>
+	</div>
+	<div class="row button-wrapper">
+		<div class="columns large-12">
+			<a href="#" class="order">Замовити консультацію</a>
+		</div>
+	</div>
+</div>

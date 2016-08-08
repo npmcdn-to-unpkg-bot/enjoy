@@ -16,29 +16,31 @@
 	// start! ----------------------------------------------------------------------------------------- //
 	window.addEventListener && window.addEventListener('DOMContentLoaded', function(){
 		document.body.className += ' dom-loaded';
+
+		// gallery
+		$('.offer-items .items-wrapper > div, .gallery-items .items-wrapper > div').masonry({
+			columnWidth: '.item'
+		});
 	}); 
 
 	// show site -------------------------------------------------------------------------------------- //
 	window.addEventListener && window.addEventListener('load', function(){
 		document.body.className += ' loaded';
 
-		$('.category .items-wrapper > div').masonry({
-			columnWidth: '.item'
-		});
-		$('.project .items-wrapper > div').masonry({
-			columnWidth: '.item'
-		});
+		menuOpen()
 
 		// PROJECT PAGE
 		if($('body').hasClass('project-page')) {
-			closeScroll(); 		// блокувати скрол
-			openMaterial();		// відкрити лист матеріалів
-			numColorsElem();
-			chooseSize(); 		// вибір розміру
-			chooser(); 			// 
+			closeScroll();
+			openMaterial();
+			openColor();
+			numMaterialsElem();
+			numColorElem();
+			chooseSize();
+			chooser();
 			if(!isMobile) {
-				elevateZoom(); 	// активація зуму
-				parralaxMaterial(); // активація паралаксу листа матеріалів
+				elevateZoom(); // активація зуму
+				parallaxMaterial(); // активація паралаксу листа матеріалів
 			} else {
 				$('.owl-materials').owlCarousel({
 					loop: false,
@@ -99,8 +101,11 @@
 
 
 
-
-
+	function menuOpen() {
+		$('header .open-menu-button').on('click', function() {
+			_body.toggleClass('open-menu')
+		})
+	}
 
 
 
@@ -115,7 +120,7 @@
 	// PROJECT PAGE ------------------------------------------------------------------------------ //
 
 	function closeScroll() {
-		var scrollCloseBlock = document.querySelector('.materials-wrapper');
+		var scrollCloseBlock = document.querySelector('.elements-wrapper');
 		function handler(event, delta, deltaX, deltaY) {
 			event.preventDefault();
 		};
@@ -130,38 +135,41 @@
 		});
 	};
 
-	function parralaxMaterial() {
+	function parallaxMaterial() {
 		// визначаю ширину кожного елемента ТКАНИНА
-		var item = $('.materials-wrapper .materials .wrapper > div');
-		var num = item.length;
+		var item = $('.elements-wrapper .materials .wrapper > div'),
+			num = item.length,
+			sizer = 1;
 		item.css({
-			'width': 100/num + '%',
-			'padding-top': 100/num + '%'
+			'width': (100/num)*sizer + '%',
+			'padding-top': (100/num)*sizer + '%'
 		});
 		// визначаю ширину кожного елемента КОЛІР
-		var item = $('.materials-wrapper .colors .wrapper > div');
+		var item = $('.elements-wrapper .colors .wrapper > div');
 		var num = item.length;
 		item.css({
-			'width': 100/num + '%',
-			'padding-top': 100/num + '%'
+			'width': (100/num)*sizer + '%',
+			'padding-top': (100/num)*sizer + '%'
 		});
 
 		// go parralax materials
-		$('.materials-wrapper .materials .wrapper').parallax({
-			mouseport: $('.materials-wrapper .materials'),
+		$('.elements-wrapper .materials .wrapper').parallax({
+			mouseport: $('.elements-wrapper .materials'),
 			yparallax: false,
 			xparallax: '100%'
+
 		});
 		// go parralax colors
-		$('.materials-wrapper .colors .wrapper').parallax({
-			mouseport: $('.materials-wrapper .colors'),
+		$('.elements-wrapper .colors .wrapper').parallax({
+			mouseport: $('.elements-wrapper .colors'),
 			yparallax: false,
 			xparallax: '100%'
 		});
 	};
 
+	// відкрити матеріали
 	function openMaterial() {
-		$('.choice-material .elect-materials').on('click', function() {
+		$('.choice-wrapper .elect-materials').on('click', function() {
 			if(!isMobile) {
 				$('body').toggleClass('show-materials');
 			} else {
@@ -169,7 +177,18 @@
 			};
 		});
 	};
+	// відкрити колір
+	function openColor() {
+		$('.choice-wrapper .elect-colors').on('click', function() {
+			if(!isMobile) {
+				$('body').toggleClass('show-colors');
+			} else {
+				$('body').toggleClass('show-colors');
+			};
+		});
+	};
 
+	// обрати розмір
 	function chooseSize() {
 		$('.project .small-sizes .size-1 span').on('click', function() {
 			$('.project .small-sizes .size-1 span').removeClass('active');
@@ -177,10 +196,26 @@
 		});
 	};
 
-	// позиціонування колір малий
-	function numColorsElem() {
+	// позиціонування матеріал малий
+	function numMaterialsElem() {
 		var i,
-			elem = $('.project .choice-material .colors-wrapper > div'),
+			elem = $('.project .choice-material .rainbow > div'),
+			num = elem.length,
+			calc = 180/num*2;
+		var fixedNum = calc;
+		for (i=0; i<num; i++) {
+			elem[i].style.webkitTransform = 'rotate(' + calc + 'deg' + ')';
+			elem[i].style.MozTransform = 'rotate(' + calc + 'deg' + ')';
+			elem[i].style.msTransform = 'rotate(' + calc + 'deg' + ')';
+			elem[i].style.OTransform = 'rotate(' + calc + 'deg' + ')';
+			elem[i].style.transform = 'rotate(' + calc + 'deg' + ')';
+			calc+=fixedNum;
+		};
+	};
+	// позиціонування колір малий
+	function numColorElem() {
+		var i,
+			elem = $('.project .choice-color .rainbow > div'),
 			num = elem.length,
 			calc = 180/num*2;
 		var fixedNum = calc;
@@ -195,17 +230,14 @@
 	};
 
 	function chooser() {
-
 		// вибір вигляду крісла
 		$('.project .small-images .item').on('click', function() {
 			var bigImage = $(this).attr('data-img');
 			$('.project .home-image img').attr('src', bigImage);
 			$('.project .home-image img').attr('data-zoom-image', bigImage);
-
 			// active class
 			$('.project .small-images > div > div').removeClass('active');
 			$(this).parent().addClass('active');
-
 			// re-initialize
 			if(!isMobile) {
 				$('#zoom-project').data('zoom-image', bigImage).elevateZoom({
@@ -216,7 +248,7 @@
 			};
 		});
 
-		// вибір матеріалу та кольору в попапі
+
 		$('.materials-wrapper .wrapper .item').on('click', function() {
 			$(this).parents('.wrapper').find('.item').removeClass('active');
 			//$('.materials-wrapper .materials .item').removeClass('active');
@@ -225,22 +257,36 @@
 			$('.project .elect-materials').css('background', 'url(' + material + ')');
 		});
 
-		// синхронізація вибору кольору
-		$('.materials-wrapper .colors .item, .project .choice-material .colors-wrapper div span').on('click', function() {
+
+		// вибір кольору
+		$('.elements-wrapper .materials .item, .rainbow-materials div .item').on('click', function() {
 			var dataItem =  $(this).attr('data-item');
-			$('.project .choice-material .colors-wrapper div span').removeClass('active');
-			$('.materials-wrapper .colors .item').removeClass('active');
-			$('.project .choice-material .colors-wrapper div span[data-item=' + dataItem + ']').addClass('active');
-			$('.materials-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
+			$('.rainbow-materials div .item').removeClass('active');
+			$('.elements-wrapper .materials .item').removeClass('active');
+			$('.rainbow-materials div .item[data-item=' + dataItem + ']').addClass('active');
+			$('.elements-wrapper .materials .item[data-item=' + dataItem + ']').addClass('active');
+			var material = $(this).attr('data-img');
+			$('.project .elect-materials').css('background', 'url(' + material + ')');
+		});
+
+		// вибір матеріалу
+		$('.elements-wrapper .colors .item, .rainbow-colors div .item').on('click', function() {
+			var dataItem =  $(this).attr('data-item');
+			$('.rainbow-colors div .item').removeClass('active');
+			$('.elements-wrapper .colors .item').removeClass('active');
+			$('.rainbow-colors div .item[data-item=' + dataItem + ']').addClass('active');
+			$('.elements-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
+			var material = $(this).attr('data-img');
+			$('.project .elect-colors').css('background', 'url(' + material + ')');
 		});
 
 		// закрити попап
-		$('.materials-wrapper .close').on('click', function() {
-			$('body').removeClass('show-materials');
+		$('.elements-wrapper .close').on('click', function() {
+			$('body').removeClass('show-materials show-colors');
 		});
 	}
 
-
+	// END --------------------------------------------------------------------------------------- //
 
 
 

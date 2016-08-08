@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Enjoy</title>
+	<title>Enjoy - contacts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/app.css">
@@ -11,19 +11,100 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="contacts-page">
 
+	<div class="title-page">
+		<div class="row">
+			<div class="columns latge-12">
+				<div class="row">
+					<div class="columns latge-12">
+						<h1><span></span>Contacts</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<header>
+	<div class="header-wrapper">
+		<div class="logo-wrapper">
+			<img src="img/logo.png" alt="">
+		</div>
+		<div class="menu-wrapper">
+			<ul class="menu">
+				<li><a href="#">Про компанію</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Клієнтам</a></li>
+				<li><a href="#">Статті</a></li>
+				<li><a href="#">Контакти</a></li>
+			</ul>
+		</div>
+		<div class="bucket-wrapper">
+			<div class="bucket">
+				<span class="count">10</span>
+			</div>
+		</div>
+		<div class="open-menu-button">
+			<span></span><span></span><span></span>
+		</div>
+	</div>
+</header>	<div class="content-wrapper">
+<div class="row">
+	<div class="columns large-12">
+		<div class="row">
+			<div class="columns large-12">
+				<div class="text-wrapper">
+					<div class="text">
+						<p>вул. Морозна 19а, Львів</p>
+						<p>(098) 062 25 50<br>
+							(093) 475 64 54
+						</p>
+						<a href="mailto:info@enjoybrand.com.ua">info@enjoybrand.com.ua</a>
+					</div>
+					<div class="form-wrapper">
+						<form method="POST" id="formx" action="javascript:void(null);" onsubmit="form()" autocomplete="off">
+							<input class="form-cont" name="name" type="text" data-title="form" key="name" placeholder="Ім'я *" required="">
+							<input class="form-cont" name="phone" type="text" data-title="form" key="phone" placeholder="Телефон *" required="">
+							<input class="form-cont" name="mail" type="email" data-title="form" key="mail" placeholder="E-mail *" required="">
+							<textarea class="form-cont" name="message" id="" cols="30" rows="7" key="text" data-title="form" placeholder="Текст повідомлення *" required=""></textarea>
+							<input class="button form-cont order" data-title="form" type="submit" key="submit" value="Надіслати">
+						</form>
+					</div>
+				</div>
+				<div class="map-wrapper">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	</div>
 <footer>
 	<div class="row">
-		<div class="columns large-6 copyring">
-			<p>© Enjoy</p>
-		</div>
-		<div class="columns large-6 developer">
-			<p><a href="http://bambukstudio.com" target="_blank">Designed & Developed by Bambuk</a></p>
+		<div class="columns large-6 large-centered">
+			<div class="menu-wrapper">
+				<ul class="menu">
+					<li><a href="#">Про компанію</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Клієнтам</a></li>
+					<li><a href="#">Статті</a></li>
+					<li><a href="#">Контакти</a></li>
+				</ul>
+			</div>
+			<div class="social-wrapper">
+				<a href="#" class="face"></a>
+				<a href="#" class="insta"></a>
+			</div>
+			<div class="copyring">
+				<p>© Enjoy</p>
+			</div>
+			<div class="developer">
+				<a href="http://bambukstudio.com" target="_blank">Designed & Developed by Bambuk</a>
+			</div>
 		</div>
 	</div>
 </footer>
-    <script src="js/build/index.min.js"></script>   
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="js/build/index.min.js"></script>
     
     <script src='//localhost:3000/socket.io/socket.io.js'></script>
     <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
