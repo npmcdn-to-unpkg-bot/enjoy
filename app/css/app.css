@@ -2179,6 +2179,18 @@ footer {
       background: #f3f3f3 url(../pictures/home/img-6.png) no-repeat center; }
     .home-category .items-wrapper .item p {
       margin: 0; }
+    .home-category .items-wrapper .item .button {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: -webkit-calc(100% - 2vw);
+      width: calc(100% - 2vw);
+      height: -webkit-calc(100% - 2vw);
+      height: calc(100% - 2vw); }
     .home-category .items-wrapper .item .text {
       display: none;
       position: absolute;
@@ -2193,7 +2205,6 @@ footer {
       position: absolute;
       top: 9vw;
       left: 0;
-      width: 100%;
       z-index: 1;
       color: #5c267f;
       text-transform: uppercase;
@@ -2279,7 +2290,7 @@ footer {
       .project > div {
         margin: 220px auto; } }
   .project .constructor {
-    margin-top: 0; }
+    margin-top: 140px; }
     .project .constructor .images-wrapper .small-images {
       position: relative;
       z-index: 1;
@@ -3075,7 +3086,8 @@ footer {
           outline: none;
           display: inline-block;
           vertical-align: top;
-          border-radius: 100%; }
+          border-radius: 100%;
+          font-size: 16px; }
           .full-version .elements-wrapper .materials .wrapper > div span, .full-version .elements-wrapper .colors .wrapper > div span {
             position: absolute;
             top: 50%;
@@ -3117,7 +3129,6 @@ footer {
         transform: translateX(-50%);
         border-radius: 100%; }
       .mobile .elements-wrapper .owl-materials .owl-item p {
-        display: none;
         position: absolute; }
     .mobile .elements-wrapper .owl-colors .owl-item {
       position: relative;

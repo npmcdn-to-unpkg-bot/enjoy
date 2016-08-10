@@ -144,6 +144,15 @@
 			p {
 				margin: 0;
 			}
+			.button {
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: calc(100% - 2vw);
+				height: calc(100% - 2vw);
+			}
 			.text {
 				display: none;
 				position: absolute;
@@ -159,7 +168,6 @@
 				position: absolute;
 				top: 9vw;
 				left: 0;
-				width: 100%;
 				z-index: 1;
 					color: $color-1;
 					text-transform: uppercase;

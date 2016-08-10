@@ -16,7 +16,7 @@
 
 	// constructor
 	.constructor {
-		margin-top: 0;
+		margin-top: 140px;
 
 		// images
 		.images-wrapper {
@@ -988,6 +988,7 @@
 					vertical-align: top;
 					//border: 1px solid black;
 					border-radius: 100%;
+						font-size: 16px;
 					span {
 						position: absolute;
 						top: 50%;
@@ -1044,7 +1045,6 @@
 					border-radius: 100%;
 				}
 				p {
-					display: none;
 					position: absolute;
 				}
 			}
