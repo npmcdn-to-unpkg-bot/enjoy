@@ -1493,6 +1493,8 @@ h2 {
   color: #5e5e5e;
   font-size: 34px;
   font-weight: 300; }
+  h2.center {
+    text-align: center; }
   @media only screen and (min-width:641px) {
     h2 {
       font-size: 48px; } }
@@ -1510,6 +1512,15 @@ h3 {
   @media only screen and (min-width:1261px) {
     .title-page {
       margin: 6vw 0 6vw; } }
+
+.color {
+  background: #5c267f;
+  padding: 140px 0; }
+  .color .title {
+    margin: 0 0 100px 0;
+    color: white; }
+  .color .small-item {
+    color: white; }
 
 .small-item {
   text-align: center; }
@@ -3054,18 +3065,6 @@ footer {
       display: none; }
 
 
-.clients-page .features {
-  padding: 140px 0;
-  background: #5c267f;
-  color: white; }
-  .clients-page .features h2 {
-    color: white; }
-  .clients-page .features .items-wrapper {
-    margin: 100px 0 0 0; }
-.clients-page .information {
-  padding: 140px 0; }
-  .clients-page .information .small-item h4 {
-    color: #5c267f; }
 .clients-page .partners {
   padding: 140px 0;
   background: #5c267f;
@@ -3081,24 +3080,36 @@ footer {
 .clients-page .consultation {
   padding: 140px 0; }
   .clients-page .consultation .items-wrapper {
+    outline: 1px solid;
     margin: 100px 0 0 0;
     font-size: 0;
     text-align: center; }
     .clients-page .consultation .items-wrapper .item {
-      margin: 0 32px;
       display: inline-block;
       vertical-align: top;
+      width: 50%;
+      max-width: 460px;
+      outline: 1px solid red;
+      min-height: calc(220px + 20px);
+      position: relative;
+      padding: 0 32px 0 0;
       font-size: 16px; }
       .clients-page .consultation .items-wrapper .item .image {
         width: 220px;
         height: 220px;
         border-radius: 100%;
-        background-size: cover !important; }
+        background-size: cover !important;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%); }
         .clients-page .consultation .items-wrapper .item .image img {
           border-radius: 100%;
           width: 100%; }
       .clients-page .consultation .items-wrapper .item .text {
-        margin: 32px 0; }
+        padding: 0 0 0 calc(220px + 24px);
+        width: 100%;
+        text-align: left; }
         .clients-page .consultation .items-wrapper .item .text p {
           margin: 0; }
           .clients-page .consultation .items-wrapper .item .text p.name {
@@ -3106,11 +3117,6 @@ footer {
             color: #5e5e5e; }
           .clients-page .consultation .items-wrapper .item .text p.position {
             font-size: 14px; }
-  .clients-page .consultation .button-wrapper {
-    margin: 48px auto 0;
-    text-align: center; }
-    .clients-page .consultation .button-wrapper .order {
-      display: inline-block; }
 
 .faq-page .issue .items-wrapper .item {
   position: relative;

@@ -378,18 +378,21 @@
 		"consultation": [
 			{
 				"image": "pictures/consultation/img-1.jpg",
-				"name": "Name Surname",
-				"position": "position"
+				"name": "Андрій",
+				"tel": "063 870 43 45",
+				"position": "менеджер по роботі з ключовими клієнтами"
 			},
 			{
 				"image": "pictures/consultation/img-2.jpg",
-				"name": "Name Surname",
-				"position": "position"
+				"name": "Роман",
+				"tel": "063 870 43 45",
+				"position": "менеджер по роботі з ключовими клієнтами"
 			},
 			{
 				"image": "pictures/consultation/img-3.jpg",
-				"name": "Name Surname",
-				"position": "position"
+				"name": "Тарас",
+				"tel": "063 870 43 45",
+				"position": "менеджер по роботі з ключовими клієнтами"
 			}
 		]
 	},
