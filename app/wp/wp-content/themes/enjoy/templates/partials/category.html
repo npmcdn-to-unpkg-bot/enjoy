@@ -1,0 +1,21 @@
+<!-- gallery -->
+<div class="row max-none collapse offer-items">
+	<div class="columns large-12">
+		<div class="items-wrapper">
+			<div>
+				{{#category.item}}
+				<div class="item {{{class}}}">
+					<div class="wrapper">
+						<div>
+							<div class="image" style="background:url('{{{image}}}') no-repeat center"></div>
+							<h3 class="name">{{{name}}}<span>{{{name-big}}}</span></h3>
+							<a href="#" class="order">Замовити</a>
+							<span class="price"><span>{{{price}}}</span> грн</span>
+						</div>
+					</div>
+				</div>
+				{{/category.item}}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,603 @@
+{
+	"category": {
+		"item": [
+			{
+				"class": "standard",
+				"image": "pictures/img.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img3.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "small-image",
+				"image": "pictures/img7.jpg",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "small-image",
+				"image": "pictures/img9.jpg",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img4.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img3.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img.png",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			},
+			{
+				"class": "big-image",
+				"image": "pictures/img2.jpg",
+				"name": "крісло-груша",
+				"name-big": "Quardro",
+				"price": "1254"
+			}
+		]
+	},
+
+	"project": {
+		"item": [
+			{
+				"class": "text",
+				"image": "",
+				"text": "Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку, перевернувши її на бік."
+			},
+			{
+				"class": "big",
+				"image": "pictures/img7.jpg",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img8.jpg",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img4.jpg",
+				"text": "" 
+			},
+			{
+				"class": "text",
+				"image": "pictures/img5.jpg",
+				"text": "Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку, перевернувши її на бік. Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку."
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img6.jpg",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "pictures/img9.jpg",
+				"text": "Комфортне місце для сидіння, можна використовувати і як подушку, перевернувши її на бік."
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img5.jpg",
+				"text": ""
+			}
+		],
+
+		"accessories": {
+			"item": [
+				{
+					"class": "",
+					"image": "pictures/img6.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				},
+				{
+					"class": "",
+					"image": "pictures/img7.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				},
+				{
+					"class": "",
+					"image": "pictures/img8.png",
+					"name": "крісло-груша",
+					"name-big": "Quardro",
+					"price": "1254"
+				}
+			]
+		}
+	},
+
+	"item-materials": [
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-1"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/2.jpg",
+			"number": "item-2"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-3"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/5.jpg",
+			"number": "item-4"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/6.jpg",
+			"number": "item-5"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-6"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/8.jpg",
+			"number": "item-7"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/7.jpg",
+			"number": "item-8"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-9"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-10"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-11"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-12"
+		}
+	],
+
+	"item-colors": [
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-1"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/2.jpg",
+			"number": "item-2"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-3"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/5.jpg",
+			"number": "item-4"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/6.jpg",
+			"number": "item-5"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-6"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/8.jpg",
+			"number": "item-7"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/7.jpg",
+			"number": "item-8"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-9"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-10"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-11"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-12"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/4.jpg",
+			"number": "item-13"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/8.jpg",
+			"number": "item-14"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/7.jpg",
+			"number": "item-15"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-16"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-17"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/1.jpg",
+			"number": "item-18"
+		},
+		{
+			"name": "Тканина 1",
+			"image": "pictures/materials/3.jpg",
+			"number": "item-19"
+		}
+	],
+
+	"size-items": [
+		{
+			"image": "pictures/img9.png",
+			"size-1": "L",
+			"size-2": "176 - 180",
+			"width": "70",
+			"height": "90"
+		},
+		{
+			"image": "pictures/img10.png",
+			"size-1": "L",
+			"size-2": "176 - 180",
+			"width": "70",
+			"height": "90"
+		}
+	],
+
+	"clients": {
+		"item": [
+			{
+				"class": "standard",
+				"image": "pictures/img3.jpg",
+				"text": "" 
+			},
+			{
+				"class": "big",
+				"image": "pictures/img11.jpg",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "pictures/img5.jpg",
+				"text": "Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку, перевернувши її на бік. Комфортне місце для сидіння, а завдяки видовженій формі; можна використовувати і як подушку."
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img12.jpg",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img10.jpg",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img13.jpg",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"text": "Комфортне місце для сидіння, можна використовувати і як подушку, перевернувши її на бік."
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img4.jpg",
+				"text": ""
+			}
+		],
+		"logos": [
+			{
+				"image": "pictures/partners/logo-1.png"
+			},
+			{
+				"image": "pictures/partners/logo-2.png"
+			},
+			{
+				"image": "pictures/partners/logo-3.png"
+			},
+			{
+				"image": "pictures/partners/logo-4.png"
+			},
+			{
+				"image": "pictures/partners/logo-5.png"
+			},
+			{
+				"image": "pictures/partners/logo-6.png"
+			},
+			{
+				"image": "pictures/partners/logo-7.png"
+			}
+		],
+		"consultation": [
+			{
+				"image": "pictures/consultation/img-1.jpg",
+				"name": "Name Surname",
+				"position": "position"
+			},
+			{
+				"image": "pictures/consultation/img-2.jpg",
+				"name": "Name Surname",
+				"position": "position"
+			},
+			{
+				"image": "pictures/consultation/img-3.jpg",
+				"name": "Name Surname",
+				"position": "position"
+			}
+		]
+	},
+
+	"home": {
+		"item": [
+			{
+				"class": "empty",
+				"image": "",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "pictures/img11.jpg",
+				"title": "Для прогресивних компаній",
+				"text": "створюють комфортну, творчу та неформальну атмосферу в колективі"
+			},
+			{
+				"class": "big",
+				"image": "pictures/img11.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img16.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "big",
+				"image": "pictures/img17.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"title": "Для закладів, розважальних комплексів",
+				"text": "які забезпечують найкращий відпочинок для своїх відвідувачів"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img15.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img10.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"title": "Для активних людей",
+				"text": "які завжди на хвилі останній тенденцій стилю та дизайну!"
+			}
+		]
+	},
+
+	"about": {
+		"item": [
+			{
+				"class": "standard",
+				"image": "pictures/img3.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"title": "Команда",
+				"text": "Enjoy - компанія молодих 'заряджених' спеціалістів, які отримують задоволення від своїє роботи."
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img20.jpg",
+				"title": "",
+				"text": "" 
+			},
+			{
+				"class": "big",
+				"image": "pictures/img17.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"title": "Основний напрям діяльності -",
+				"text": "це виробництво відпочинкових меблів як для домашнього використання так і для корпоративних клієнтів"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img6.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img19.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text landscape",
+				"image": "",
+				"title": "Для кого",
+				"text": "Офіси та салони, дитячі та розважальні центри, коворкінги та кафе, хостели та готелі, бази відпочинку та приватні комплекси - ми із зодоволенням працюємо зі всіма, для кого важливий стиль та комфорт"
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img15.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "empty",
+				"image": "",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img14.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "big",
+				"image": "pictures/img13.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text",
+				"image": "",
+				"title": "На нашому сайті",
+				"text": "Ви можете переглянути каталог відпочинкових меблів ексклюзивного дизайну, а також кольористику та асортимент імпортних матеріалів"
+			},
+			{
+				"class": "empty",
+				"image": "pictures/img15.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "standard",
+				"image": "pictures/img15.jpg",
+				"title": "",
+				"text": ""
+			},
+			{
+				"class": "text landscape",
+				"image": "",
+				"title": "Насолоджуйся!",
+				"text": "Ми віримо в силу якості продукту, сервісу та дизайну. Цінності та ідеї, закладені в бренд, визначають нашу постійну роботу над продуктом та компанією. Прагнемо, щоб кожен клієнт отримував значно більше, ніж може очікувати. Ми видумуємо, експериментуємо, створюємо і томузавжди відкриті до нових ідей та пропозицій. Напишіть нам - і ми спробуємо втілити Ваш дизанерський задум"
+			},
+			{
+				"class": "landscape",
+				"image": "pictures/img16.jpg",
+				"title": "",
+				"text": ""
+			}
+		]
+	},
+
+	"faq": {
+		"item": [
+			{
+				"title": "Для кого наша продукція?",
+				"text": "<p>Для активних людей, які завжди на хвилі останніх тенденцій стилю та дизайну!</p><p>Для прогресивних компаній, які створюють комфортну, творчу та неформальну атмосферу в колективі.</p><p>Для закладів, розважальних комплексів, які забезпечують найкращий відпочинок для своїх відвідувачів."
+			},
+			{
+				"title": "Для чого ця продукція?",
+				"text": "<p>Це продукція для відпочинку, а в нашому випадку ще й для естетичного задоволення. Як не крути, безкаркасні меблі - це не класичні м’ягкі меблі і купують їх переважно не з точки зору практичності, а відпочинку та фану.</p>"
+			},
+			{
+				"title": "Що можна на ній робити?",
+				"text": "<p>Сидіти, лежати, відпочивати, працювати, спати, грати в x-box, дивитися фільми.</p>"
+			},
+			{
+				"title": "Для кого наша продукція?",
+				"text": "<p>Для активних людей, які завжди на хвилі останніх тенденцій стилю та дизайну!</p><p>Для прогресивних компаній, які створюють комфортну, творчу та неформальну атмосферу в колективі.</p><p>Для закладів, розважальних комплексів, які забезпечують найкращий відпочинок для своїх відвідувачів."
+			},
+			{
+				"title": "Для чого ця продукція?",
+				"text": "<p>Це продукція для відпочинку, а в нашому випадку ще й для естетичного задоволення. Як не крути, безкаркасні меблі - це не класичні м’ягкі меблі і купують їх переважно не з точки зору практичності, а відпочинку та фану.</p>"
+			},
+			{
+				"title": "Що можна на ній робити?",
+				"text": "<p>Сидіти, лежати, відпочивати, працювати, спати, грати в x-box, дивитися фільми.</p>"
+			},
+			{
+				"title": "Для кого наша продукція?",
+				"text": "<p>Для активних людей, які завжди на хвилі останніх тенденцій стилю та дизайну!</p><p>Для прогресивних компаній, які створюють комфортну, творчу та неформальну атмосферу в колективі.</p><p>Для закладів, розважальних комплексів, які забезпечують найкращий відпочинок для своїх відвідувачів."
+			},
+			{
+				"title": "Для чого ця продукція?",
+				"text": "<p>Це продукція для відпочинку, а в нашому випадку ще й для естетичного задоволення. Як не крути, безкаркасні меблі - це не класичні м’ягкі меблі і купують їх переважно не з точки зору практичності, а відпочинку та фану.</p>"
+			},
+			{
+				"title": "Що можна на ній робити?",
+				"text": "<p>Сидіти, лежати, відпочивати, працювати, спати, грати в x-box, дивитися фільми.</p>"
+			}
+		]
+	}
+}

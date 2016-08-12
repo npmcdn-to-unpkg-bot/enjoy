@@ -1,0 +1,62 @@
+{
+	"bg-image": {
+		"image": "pictures/img-1.jpg"
+	},
+
+	"steps": {
+		"step": [
+			{
+				"number": "1",
+				"title": "Join",
+				"text": "Inimicus perpetua eu mel. Cu etiam to nonumes detracto eam."
+			},
+			{
+				"number": "2",
+				"title": "Bet",
+				"text": "Ut volutpat liberavisse sed. Tale laborpartiendo eos ei, no."
+			},
+			{
+				"number": "3",
+				"title": "Win",
+				"text": "Pro cu facer regione fabulas, an epicu iracundia pro, eam labores."
+			}
+		]
+	},
+
+	"offers": {
+		"item": [
+			{
+				"image": "pictures/img-2.png",
+				"top-left-1": "13",
+				"top-left-2": "8",
+				"top-right-1": "8",
+				"top-right-2": "1",
+				"text": "Get Man united to win"
+			},
+			{
+				"image": "pictures/img-2.png",
+				"top-left-1": "11",
+				"top-left-2": "4",
+				"top-right-1": "120",
+				"top-right-2": "3",
+				"text": "Get arsenal to win Tamquam fuisset qui ut nec te summo option"
+			},
+			{
+				"image": "pictures/img-2.png",
+				"top-left-1": "100",
+				"top-left-2": "12",
+				"top-right-1": "200",
+				"top-right-2": "1",
+				"text": "Get Man city to win"
+			},
+			{
+				"image": "pictures/img-2.png",
+				"top-left-1": "9",
+				"top-left-2": "2",
+				"top-right-1": "32",
+				"top-right-2": "1",
+				"text": "Get Cheslea to win"
+			}
+		]
+	}
+}
