@@ -1,0 +1,23 @@
+<div class="step-wrapper">
+	<div class="row">
+		<div class="columns large-12">
+			{{#steps}}
+			<div class="steps">
+				{{#step}}
+				<div class="step clearfix">
+					<div class="number">
+						<div>
+							{{{number}}}
+						</div>
+					</div>
+					<div class="text">
+						<h2>{{{title}}}</h2>
+						<p>{{{text}}}</p>
+					</div>
+				</div>
+				{{/step}}
+			</div>
+			{{/steps}}
+		</div>
+	</div>
+</div>
