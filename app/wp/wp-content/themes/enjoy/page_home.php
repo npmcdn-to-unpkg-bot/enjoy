@@ -80,123 +80,26 @@ Template Name: Home
 	<div class="columns large-12">
 		<div class="items-wrapper">
 			<div>
-				<div class="item empty">
+<?php $items = get_post_meta( $post->ID, 'items', true ); 
+foreach( $items as $item){ 
+	$image_attributes = wp_get_attachment_image_src( $attachment_id = $item['image'], $size = 'full' );?>
+				<div class="item <?php echo $item['block-type']?>">
 					<div class="wrapper">
 						<div>
-							<div class="image" style="background:url('') no-repeat center"></div>
+							<div class="image" style="background:url('<?php echo $image_attributes[0]; ?>') no-repeat center"></div>
 							<div class="text-wrapper">
 								<div>
-									<h3></h3>
-									<p></p>
+									<h3><?php echo $item['title']?></h3>
+									<?php echo $item['description']?>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item text">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img11.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3>Для прогресивних компаній</h3>
-									<p>створюють комфортну, творчу та неформальну атмосферу в колективі</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item big">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img11.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item landscape">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img16.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item big">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img17.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item text">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3>Для закладів, розважальних комплексів</h3>
-									<p>які забезпечують найкращий відпочинок для своїх відвідувачів</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item standard">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img15.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item standard">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img10.jpg') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item text">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('') no-repeat center"></div>
-							<div class="text-wrapper">
-								<div>
-									<h3>Для активних людей</h3>
-									<p>які завжди на хвилі останній тенденцій стилю та дизайну!</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
+<?php
+ }
+?>
 			</div>
 		</div>
 	</div>
