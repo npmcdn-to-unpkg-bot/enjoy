@@ -33,7 +33,6 @@
 		if($('body').hasClass('project-page')) {
 			closeScroll();
 			openMaterial();
-			openColor();
 			numMaterialsElem();
 			numColorElem();
 			chooseSize();
@@ -119,6 +118,7 @@
 
 	// PROJECT PAGE ------------------------------------------------------------------------------ //
 
+	// блокувати скрол, коли відкритий лист матеріалів
 	function closeScroll() {
 		var scrollCloseBlock = document.querySelector('.elements-wrapper');
 		function handler(event, delta, deltaX, deltaY) {
@@ -127,6 +127,7 @@
 		Hamster(scrollCloseBlock).wheel(handler,false);
 	};
 
+	// zoom image
 	function elevateZoom() {
 		$('#zoom-project').elevateZoom({
 			zoomType: 'lens',
@@ -135,8 +136,9 @@
 		});
 	};
 
+	// паралакс на листі матеріалів
 	function parallaxMaterial() {
-		// визначаю ширину кожного елемента ТКАНИНА
+		// визначаю ширину кожного елемента МАТЕРІАЛ
 		var item = $('.elements-wrapper .materials .wrapper > div'),
 			num = item.length,
 			sizer = 1;
@@ -157,7 +159,6 @@
 			mouseport: $('.elements-wrapper .materials'),
 			yparallax: false,
 			xparallax: '100%'
-
 		});
 		// go parralax colors
 		$('.elements-wrapper .colors .wrapper').parallax({
@@ -167,25 +168,23 @@
 		});
 	};
 
-	// відкрити матеріали
+	// відкрити лист матеріалів чи кольору
 	function openMaterial() {
-		$('.choice-wrapper .elect-materials').on('click', function() {
-			if(!isMobile) {
-				$('body').toggleClass('show-materials');
+		$('.constructor .choice-wrapper .elect').on('click', function() {
+			if($(this).hasClass('elect-materials')) {
+				if(!isMobile) {
+					$('body').toggleClass('show-materials');
+				} else {
+					$('body').toggleClass('show-materials');
+				};
 			} else {
-				$('body').toggleClass('show-materials');
-			};
-		});
-	};
-	// відкрити колір
-	function openColor() {
-		$('.choice-wrapper .elect-colors').on('click', function() {
-			if(!isMobile) {
-				$('body').toggleClass('show-colors');
-			} else {
-				$('body').toggleClass('show-colors');
-			};
-		});
+				if(!isMobile) {
+					$('body').toggleClass('show-colors');
+				} else {
+					$('body').toggleClass('show-colors');
+				};
+			}
+		})
 	};
 
 	// обрати розмір
@@ -196,7 +195,7 @@
 		});
 	};
 
-	// позиціонування матеріал малий
+	// позиціонування матеріал на превюшці
 	function numMaterialsElem() {
 		var i,
 			elem = $('.project .choice-material .rainbow > div'),
@@ -212,7 +211,7 @@
 			calc+=fixedNum;
 		};
 	};
-	// позиціонування колір малий
+	// позиціонування колір на превюшці
 	function numColorElem() {
 		var i,
 			elem = $('.project .choice-color .rainbow > div'),
@@ -248,40 +247,95 @@
 			};
 		});
 
-
-		$('.materials-wrapper .wrapper .item').on('click', function() {
-			$(this).parents('.wrapper').find('.item').removeClass('active');
-			//$('.materials-wrapper .materials .item').removeClass('active');
-			$(this).addClass('active');
+		// вибір матеріалу
+		// (при кліку на превюшку)
+		$('.rainbow-materials div .item').on('click', function() {
+			var dataItem =  $(this).attr('data-item');
+			// зміна позиції на превюшці
+			$('.rainbow-materials div .item').removeClass('active');
+			$('.rainbow-materials div .item[data-item=' + dataItem + ']').addClass('active');
+			// синхронізація з листом
+			$('.elements-wrapper .materials .item').removeClass('active');
+			$('.elements-wrapper .materials .item[data-item=' + dataItem + ']').addClass('active');
+			// заміна картинки
 			var material = $(this).attr('data-img');
 			$('.project .elect-materials').css('background', 'url(' + material + ')');
 		});
-
+		// (при кліку на лист)
+		$('.elements-wrapper .materials .item').on('click', function() {
+			var dataItem =  $(this).attr('data-item');
+			// зміна позиції на листі
+			$('.elements-wrapper .materials .item').removeClass('active');
+			$('.elements-wrapper .materials .item[data-item=' + dataItem + ']').addClass('active');
+		});
 
 		// вибір кольору
-		$('.elements-wrapper .materials .item, .rainbow-materials div .item').on('click', function() {
+		// (при кліку на превюшку)
+		$('.rainbow-colors div .item').on('click', function() {
 			var dataItem =  $(this).attr('data-item');
-			$('.rainbow-materials div .item').removeClass('active');
-			$('.elements-wrapper .materials .item').removeClass('active');
-			$('.rainbow-materials div .item[data-item=' + dataItem + ']').addClass('active');
-			$('.elements-wrapper .materials .item[data-item=' + dataItem + ']').addClass('active');
-			var material = $(this).attr('data-img');
-			$('.project .elect-materials').css('background', 'url(' + material + ')');
-		});
-
-		// вибір матеріалу
-		$('.elements-wrapper .colors .item, .rainbow-colors div .item').on('click', function() {
-			var dataItem =  $(this).attr('data-item');
+			// зміна позиції на превюшці
 			$('.rainbow-colors div .item').removeClass('active');
-			$('.elements-wrapper .colors .item').removeClass('active');
 			$('.rainbow-colors div .item[data-item=' + dataItem + ']').addClass('active');
+			// синхронізація з листом
+			$('.elements-wrapper .colors .item').removeClass('active');
 			$('.elements-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
+			// заміна картинки
 			var material = $(this).attr('data-img');
 			$('.project .elect-colors').css('background', 'url(' + material + ')');
+		});
+		// (при кліку на лист)
+		$('.elements-wrapper .colors .item').on('click', function() {
+			var dataItem =  $(this).attr('data-item');
+			// зміна позиції на листі
+			$('.elements-wrapper .colors .item').removeClass('active');
+			$('.elements-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
+		});
+
+		// застосувати обраний матеріал
+		$('.elements-wrapper .add').on('click', function() {
+
+			// матеріал
+			// внести зміни
+			var dataItem = $('.elements-wrapper .materials .wrapper span.item.active').attr('data-item');
+			// синхронізація з превюшкою
+			$('.rainbow-materials div .item').removeClass('active');
+			$('.rainbow-materials div .item[data-item=' + dataItem + ']').addClass('active');
+			// заміна картинки
+			var material = $('.elements-wrapper .materials .wrapper span.item.active').attr('data-img');
+			$('.project .elect-materials').css('background', 'url(' + material + ')');
+
+			// колір
+			// внести зміни
+			var dataItem = $('.elements-wrapper .colors .wrapper span.item.active').attr('data-item');
+			// синхронізація з превюшкою
+			$('.rainbow-colors div .item').removeClass('active');
+			$('.rainbow-colors div .item[data-item=' + dataItem + ']').addClass('active');
+			// заміна картинки
+			var material = $('.elements-wrapper .colors .wrapper span.item.active').attr('data-img');
+			$('.project .elect-colors').css('background', 'url(' + material + ')');
+
+			// закрити попап
+			$('body').removeClass('show-materials show-colors');
 		});
 
 		// закрити попап
 		$('.elements-wrapper .close').on('click', function() {
+
+			// синхронізувати лист з превюшкою
+
+			// матеріал
+			var dataItem = $('.rainbow-materials > div > span.active').attr('data-item');
+			// зміна позиції на листі
+			$('.elements-wrapper .materials .item').removeClass('active');
+			$('.elements-wrapper .materials .item[data-item=' + dataItem + ']').addClass('active');
+
+			// колір
+			var dataItem = $('.rainbow-colors > div > span.active').attr('data-item');
+			// зміна позиції на листі
+			$('.elements-wrapper .colors .item').removeClass('active');
+			$('.elements-wrapper .colors .item[data-item=' + dataItem + ']').addClass('active');
+
+			// закрити попап
 			$('body').removeClass('show-materials show-colors');
 		});
 	}

@@ -15,11 +15,33 @@
 			justify-content: center;
 				text-align: center;
 			.item {
-				width: 20%;
+				width: 100%;
 				padding: 36px 0 0;
 				img {
 					max-height: 60px;
 					max-width: 65%;
+				}
+			}
+		}
+
+		@media #{$xx_mobile-up} {						// 481
+			.items-wrapper {
+				.item {
+					width: 50%;
+				}
+			}
+		}
+		@media #{$xxx_mobile-up} {						// 641
+			.items-wrapper {
+				.item {
+					width: 33.33334%;
+				}
+			}
+		}
+		@media #{$monitor-up} {							// 1261
+			.items-wrapper {
+				.item {
+					width: 20%;
 				}
 			}
 		}
@@ -29,11 +51,11 @@
 	.consultation {
 		padding: 140px 0;
 		.items-wrapper {
-			margin: 90px 0 0 0;
+			margin: 90px 0 -52px 0;
 				font-size: 0;
 				text-align: center;
 			.item {
-				margin: 0 32px;
+				margin: 0 32px 52px;
 				display: inline-block;
 				vertical-align: top;
 					font-size: 16px;
@@ -81,16 +103,22 @@
 	// clients
 	.clients {
 		.list {
-			margin: 50px auto 0;
+			margin: 94px auto 0;
 				text-align: center;
 			p {
-				margin: 36px 0 0 0;
+				margin: 36px 36px 60px 96px;
 				display: inline-block;
+				position: relative;
 				span {
-					margin: 0 8px 0 32px;
-						font-size: 42px;
-						font-weight: 300;
-						color: $color-1;
+					opacity: 0.3;
+					position: absolute;
+					top: 50%;
+					left: -70px;
+					transform: translateY(-50%);
+					margin: -28px 0 0 10px;
+						font-size: 92px;
+						font-weight: 600;
+						color: rgba(0, 0, 0, 0.15);
 				}
 			}
 		}

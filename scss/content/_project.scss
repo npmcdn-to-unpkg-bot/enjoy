@@ -10,13 +10,13 @@
 		margin: 120px auto;
 		//outline: 1px solid red;
 		@media #{$tablet-up} {							// 854
-			margin: 220px auto;
+			margin: 9vw auto;
 		}
 	}
 
 	// constructor
 	.constructor {
-		margin-top: 140px;
+		margin-top: 7vw;
 
 		// images
 		.images-wrapper {
@@ -87,7 +87,7 @@
 						width: 120px;
 						height: 120px;
 						.elect {
-							background-color: #efefef;
+							border: 1px solid #efefef;
 							cursor: pointer;
 							z-index: 1;
 							position: absolute;
@@ -870,22 +870,35 @@
 	z-index: 100;
 	background: rgba(255,255,255,0.8);
 	.title {
-		margin: 0 0 42px;
-			font-size: 30px;
+		margin: 0 0 12vh;
+			font-size: 34px;
 			font-weight: 300;
 			text-align: center;
 	}
 	.materials, .colors {
-		.wrapper > div span:after {
-			opacity: 0;
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			border-radius: 100%;
-			border: 1px solid $color-1;
-			transform: translate(-50%, -50%);
-			transition: all .3s ease;
+		.wrapper > div {
+			p {
+				position: absolute;
+				top: calc(100% + 20px);
+				left: 0;
+				width: 100%;
+				margin: 0;
+				padding: 0 2vw;
+					text-align: center;
+					white-space: normal;
+					line-height: 120%;
+			}
+			span:after {
+				opacity: 0;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				border-radius: 100%;
+				border: 1px solid $color-1;
+				transform: translate(-50%, -50%);
+				transition: all .3s ease;
+			}
 		}
 	}
 	.materials {
@@ -929,12 +942,6 @@
 						width: calc(100% + 16px);
 						height: calc(100% + 16px);
 					}
-					// &:hover {
-					// 	&:not(.active) {
-					// 		width: calc(100% + 10px);
-					// 		height: calc(100% + 10px);
-					// 	}
-					// }
 					&.active {
 						opacity: 0.6;
 						cursor: default;
@@ -948,20 +955,48 @@
 			}
 		}
 	}
-
-	.close {
-		margin: 24px auto 0;
-		display: block;
-		width: 200px;
-		cursor: pointer;
-		border: 1px solid $color-1;
-		border-radius: 25px;
-		height: 50px;
-			line-height: 48px;
+	.buttons {
+		margin: 8vh 0 0 0;
 			text-align: center;
-			text-transform: uppercase;
-			font-size: 16px;
-			color: $color-1;
+		> span {
+			height: 50px;
+			display: inline-block;
+			vertical-align: top;
+			border: 1px solid $color-1;
+			border-radius: 25px;
+			margin: 0 16px;
+			cursor: pointer;
+		}
+		.close {
+			position: relative;
+			width: 50px;
+			margin: 0 -50px 0 0;
+			border: 1px solid $color-text-2;
+			&:after, &:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 24px;
+				width: 26px;
+				height: 1px;
+				margin: 0 0 0 -13px;
+				background: $color-text-2;
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+		}
+		.add {
+			width: 200px;
+				line-height: 48px;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 16px;
+				color: $color-1;
+		}
 	}
 
 	// styles for desktop
@@ -977,16 +1012,14 @@
 			padding: 24px 0;
 			.wrapper {
 				position: relative;
-				width: 120%;
+				width: 120% * 1.5;
 					font-size: 0;
 					white-space: nowrap;
 				> div {
 					position: relative;
 					cursor: pointer;
-					outline: none;
 					display: inline-block;
 					vertical-align: top;
-					//border: 1px solid black;
 					border-radius: 100%;
 						font-size: 16px;
 					span {
@@ -998,6 +1031,9 @@
 						transition: all .3s ease;
 						transform: translate(-50%, -50%);
 					}
+					p {
+						top: 100%;
+					}
 				}
 			}
 		}
@@ -1005,20 +1041,33 @@
 
 	// styles for mobile
 	.mobile & {
-		padding: 72px 0 0 0;
+		padding: 40px 0 0 0;
 		.title {
-			margin: 0 0 32px;
+			margin: 0 0 40px;
 				font-size: 26px;
 		}
 		.materials {
-			margin: 0 0 48px 0;
+			margin: 0 0 24px 0;
 		}
 		.owl-controls {
 			display: none;
 		}
-		.owl-materials, .owl-colors {
+		.owl-materials {
 			.owl-item .item {
 				&.active {
+					width: 160px;
+					height: 160px;
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.owl-colors {
+			.owl-item .item {
+				&.active {
+					width: 80px;
+					height: 80px;
 					&:after {
 						opacity: 1;
 					}
@@ -1029,7 +1078,7 @@
 			.owl-stage-outer {
 				position: relative;
 				overflow: hidden;
-				padding: 16px 0;
+				padding: 16px 0 66px;
 			}
 			.owl-item {
 				position: relative;
@@ -1037,15 +1086,12 @@
 				height: 200px;
 				.item {
 					position: absolute;
-					top: 0;
+					top: 50%;
 					left: 50%;
 					width: 200px;
 					height: 200px;
-					transform: translateX(-50%);
+					transform: translate(-50%, -50%);
 					border-radius: 100%;
-				}
-				p {
-					position: absolute;
 				}
 			}
 		}
@@ -1056,17 +1102,20 @@
 				height: 100px;
 				.item {
 					position: absolute;
-					top: 0;
+					top: 50%;
 					left: 50%;
 					width: 100px;
 					height: 100px;
-					transform: translateX(-50%);
+					transform: translate(-50%, -50%);
 					border-radius: 100%;
 				}
-				p {
-					display: none;
-					position: absolute;
-				}
+			}
+		}
+
+		.buttons {
+			.close {
+				display: block;
+				margin: 20px auto 0;
 			}
 		}
 	}
