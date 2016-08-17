@@ -33,17 +33,29 @@ h2 {
 	color: $color-text;
 	font-size: 34px;
 	font-weight: 300;
+	text-transform: uppercase;
+
 	&.center {
 		text-align: center;
 	}
 	@media #{$xxx_mobile-up} {						// 641
-		font-size: 48px;
+		font-size: 40px;
 	}
 }
 h3 {
 	color: $color-text;
 	font-size: 28px;
 	font-weight: 300;
+}
+
+// center all content
+.center {
+	text-align: center;
+}
+
+// 
+.block {
+	padding: 140px 0;
 }
 
 // title page
@@ -54,20 +66,21 @@ h3 {
 		margin: 90px 0 86px;
 	}
 	@media #{$monitor-up} {							// 1261
-		margin: 6vw 0 6vw;
+		margin: 7vw 0 8vw;
 	}
 }
 
-// color block
+// color rebeccapurple
 .color {
 	background: $color-1;
 	padding: 140px 0;
 	.title {
-		margin: 0 0 100px 0;
+		margin: 0 0 85px 0;
 			color: #fff;
 	}
 	.small-item {
-		color: #fff;
+		padding: 0 0 6px 0;
+			color: #fff;
 	}
 }
 
@@ -89,8 +102,8 @@ h3 {
 		h4 {
 			margin: 0;
 				font-weight: 300;
-				text-transform: uppercase;
 				font-size: 16px;
+				line-height: 140%;
 		}
 		p {
 
@@ -99,10 +112,14 @@ h3 {
 }
 
 // order button
+.button-wrapper {
+	margin: 60px 0 0 0;
+		text-align: center;
+}
 .order {
+	display: inline-block;
 	border: 1px solid $color-1;
 	border-radius: em(16px,100px);
-	display: block;
 	padding: em(16px,15px) em(16px,42px);
 		text-decoration: none;
 		text-transform: uppercase;
