@@ -41,11 +41,11 @@ class WC_Admin_Profile {
 				'title' => __( 'Customer Billing Address', 'woocommerce' ),
 				'fields' => array(
 					'billing_first_name' => array(
-						'label'       => __( 'First name', 'woocommerce' ),
+						'label'       => __( 'Як вас звати', 'woocommerce' ),
 						'description' => ''
 					),
 					'billing_last_name' => array(
-						'label'       => __( 'Last name', 'woocommerce' ),
+						'label'       => __( 'Ваше прізвище', 'woocommerce' ),
 						'description' => ''
 					),
 					'billing_company' => array(
@@ -94,11 +94,11 @@ class WC_Admin_Profile {
 				'title' => __( 'Customer Shipping Address', 'woocommerce' ),
 				'fields' => array(
 					'shipping_first_name' => array(
-						'label'       => __( 'First name', 'woocommerce' ),
+						'label'       => __( 'Як вас звати', 'woocommerce' ),
 						'description' => ''
 					),
 					'shipping_last_name' => array(
-						'label'       => __( 'Last name', 'woocommerce' ),
+						'label'       => __( 'Ваше прізвище', 'woocommerce' ),
 						'description' => ''
 					),
 					'shipping_company' => array(
@@ -153,7 +153,7 @@ class WC_Admin_Profile {
 
 		foreach ( $show_fields as $fieldset ) :
 			?>
-			<h2><?php echo $fieldset['title']; ?></h2>
+			<h3><?php echo $fieldset['title']; ?></h3>
 			<table class="form-table">
 				<?php
 				foreach ( $fieldset['fields'] as $key => $field ) :

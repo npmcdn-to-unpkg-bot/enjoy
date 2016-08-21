@@ -146,7 +146,7 @@ class WC_Shortcode_Checkout {
 							<strong><?php echo date_i18n(get_option('date_format'), strtotime($order->order_date)); ?></strong>
 						</li>
 						<li class="total">
-							<?php _e( 'Total:', 'woocommerce' ); ?>
+							<?php _e( 'Загальна сума:', 'woocommerce' ); ?>
 							<strong><?php echo $order->get_formatted_order_total(); ?></strong>
 						</li>
 						<?php if ($order->payment_method_title) : ?>
@@ -198,16 +198,12 @@ class WC_Shortcode_Checkout {
 
 		if ( $order_id > 0 ) {
 			$order = wc_get_order( $order_id );
-			if ( $order->order_key != $order_key ) {
-				$order = false;
-			}
+			if ( $order->order_key != $order_key )
+				unset( $order );
 		}
 
 		// Empty awaiting payment session
 		unset( WC()->session->order_awaiting_payment );
-
-		// Empty current cart
-		wc_empty_cart();
 
 		wc_get_template( 'checkout/thankyou.php', array( 'order' => $order ) );
 	}

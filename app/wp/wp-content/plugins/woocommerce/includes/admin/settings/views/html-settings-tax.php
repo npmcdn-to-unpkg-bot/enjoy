@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<thead>
 		<tr>
 			<th class="sort">&nbsp;</th>
-			<th width="8%"><a href="https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" target="_blank"><?php _e( 'Country&nbsp;Code', 'woocommerce' ); ?></a>&nbsp;<?php echo wc_help_tip( __( 'A 2 digit country code, e.g. US. Leave blank to apply to all.', 'woocommerce' ) ); ?></th>
+			<th width="8%"><a href="http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" target="_blank"><?php _e( 'Country&nbsp;Code', 'woocommerce' ); ?></a>&nbsp;<?php echo wc_help_tip( __( 'A 2 digit country code, e.g. US. Leave blank to apply to all.', 'woocommerce' ) ); ?></th>
 			<th width="8%"><?php _e( 'State&nbsp;Code', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'A 2 digit state code, e.g. AL. Leave blank to apply to all.', 'woocommerce' ) ); ?></th>
-			<th><?php _e( 'ZIP/Postcode', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'Postcode for this rule. Semi-colon (;) separate multiple values. Leave blank to apply to all areas. Wildcards (*) and ranges for numeric postcodes (e.g. 12345...12350) can also be used.', 'woocommerce' ) ); ?></th>
+			<th><?php _e( 'ZIP/Postcode', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'Postcode for this rule. Semi-colon (;) separate multiple values. Leave blank to apply to all areas. Wildcards (*) can be used. Ranges for numeric postcodes (e.g. 12345-12350) will be expanded into individual postcodes.', 'woocommerce' ) ); ?></th>
 			<th><?php _e( 'City', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'Cities for this rule. Semi-colon (;) separate multiple values. Leave blank to apply to all cities.', 'woocommerce' ) ); ?></th>
 			<th width="8%"><?php _e( 'Rate&nbsp;%', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'Enter a tax rate (percentage) to 4 decimal places.', 'woocommerce' ) ); ?></th>
 			<th width="8%"><?php _e( 'Tax&nbsp;Name', 'woocommerce' ); ?>&nbsp;<?php echo wc_help_tip( __( 'Enter a name for this tax rate.', 'woocommerce' ) ); ?></th>
@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <script type="text/html" id="tmpl-wc-tax-table-pagination">
 	<div class="tablenav">
 		<div class="tablenav-pages">
-			<span class="displaying-num"><?php printf( _x( '%s items', '%s will be a number eventually, but must be a string for now.', 'woocommerce' ), '{{ data.qty_rates }}' ); ?></span>
+			<span class="displaying-num"><?php printf( _x( '%s шт.', '%s will be a number eventually, but must be a string for now.', 'woocommerce' ), '{{ data.qty_rates }}' ); ?></span>
 			<span class="pagination-links">
 
 				<a class="tablenav-pages-navspan" data-goto="1">

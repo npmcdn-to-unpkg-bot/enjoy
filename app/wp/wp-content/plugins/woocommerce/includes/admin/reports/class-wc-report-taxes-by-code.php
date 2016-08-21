@@ -154,7 +154,7 @@ class WC_Report_Taxes_By_Code extends WC_Admin_Report {
 					<th class="total_row"><?php _e( 'Total Tax', 'woocommerce' ); ?> <?php echo wc_help_tip( __( 'This is the total tax for the rate (shipping tax + product tax).', 'woocommerce' ) ); ?></th>
 				</tr>
 			</thead>
-			<?php if ( ! empty( $tax_rows ) ) : ?>
+			<?php if ( $tax_rows ) : ?>
 				<tbody>
 					<?php
 					foreach ( $tax_rows as $rate_id => $tax_row ) {
@@ -174,7 +174,7 @@ class WC_Report_Taxes_By_Code extends WC_Admin_Report {
 				</tbody>
 				<tfoot>
 					<tr>
-						<th scope="row" colspan="3"><?php _e( 'Total', 'woocommerce' ); ?></th>
+						<th scope="row" colspan="3"><?php _e( 'Загальна сума', 'woocommerce' ); ?></th>
 						<th class="total_row"><?php echo wc_price( wc_round_tax_total( array_sum( wp_list_pluck( (array) $tax_rows, 'tax_amount' ) ) ) ); ?></th>
 						<th class="total_row"><?php echo wc_price( wc_round_tax_total( array_sum( wp_list_pluck( (array) $tax_rows, 'shipping_tax_amount' ) ) ) ); ?></th>
 						<th class="total_row"><strong><?php echo wc_price( wc_round_tax_total( array_sum( wp_list_pluck( (array) $tax_rows, 'tax_amount' ) ) + array_sum( wp_list_pluck( (array) $tax_rows, 'shipping_tax_amount' ) ) ) ); ?></strong></th>

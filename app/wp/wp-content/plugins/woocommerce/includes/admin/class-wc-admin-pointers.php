@@ -28,9 +28,7 @@ class WC_Admin_Pointers {
 	 * Setup pointers for screen.
 	 */
 	public function setup_pointers_for_screen() {
-		if ( ! $screen = get_current_screen() ) {
-			return;
-		}
+		$screen = get_current_screen();
 
 		switch ( $screen->id ) {
 			case 'product' :
@@ -70,7 +68,7 @@ class WC_Admin_Pointers {
 					'next'         => 'product-type',
 					'next_trigger' => array(),
 					'options'      => array(
-						'content'  => 	'<h3>' . esc_html__( 'Product Description', 'woocommerce' ) . '</h3>' .
+						'content'  => 	'<h3>' . esc_html__( 'Опис товару', 'woocommerce' ) . '</h3>' .
 										'<p>' . esc_html__( 'This is your products main body of content. Here you should describe your product in detail.', 'woocommerce' ) . '</p>',
 						'position' => array(
 							'edge'  => 'bottom',
@@ -220,7 +218,7 @@ class WC_Admin_Pointers {
 	 * @param array $pointers
 	 */
 	public function enqueue_pointers( $pointers ) {
-		$pointers = wp_json_encode( $pointers );
+		$pointers = json_encode( $pointers );
 		wp_enqueue_style( 'wp-pointer' );
 		wp_enqueue_script( 'wp-pointer' );
 		wc_enqueue_js( "

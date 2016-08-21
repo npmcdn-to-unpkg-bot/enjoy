@@ -61,7 +61,7 @@ class WC_Widget_Products extends WC_Widget {
 			'order' => array(
 				'type'  => 'select',
 				'std'   => 'desc',
-				'label' => _x( 'Order', 'Sorting order', 'woocommerce' ),
+				'label' => _x( 'Замовлення', 'Sorting order', 'woocommerce' ),
 				'options' => array(
 					'asc'  => __( 'ASC', 'woocommerce' ),
 					'desc' => __( 'DESC', 'woocommerce' ),

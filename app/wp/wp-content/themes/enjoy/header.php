@@ -25,8 +25,9 @@
 			?>
 		</div>
 		<div class="bucket-wrapper">
-			<div class="bucket">
-				<span class="count">10</span>
+			<div class="bucket cart_totals">
+				<span class="count "><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+				<a href="<?php echo get_option('home');?>/cart"></a>
 			</div>
 		</div>
 		<div class="open-menu-button">
