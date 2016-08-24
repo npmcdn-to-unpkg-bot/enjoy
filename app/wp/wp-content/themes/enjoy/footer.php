@@ -24,6 +24,7 @@
 </footer>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/build/index.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 	<?php echo get_option('ok_ga_code'); ?>
 	<?php wp_footer();?>
 </body>

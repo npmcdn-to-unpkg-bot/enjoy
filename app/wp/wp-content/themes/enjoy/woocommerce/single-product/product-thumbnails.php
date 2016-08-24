@@ -27,14 +27,17 @@ if ( $attachment_ids ) {
 	$loop 		= 0;
 	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 	?>
-	<div class="thumbnails <?php echo 'columns-' . $columns; ?>"><?php
+
+	
+	<div class="small-images">
+	<?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
 
 			$classes = array( 'zoom' );
 
-			if ( $loop === 0 || $loop % $columns === 0 )
-				$classes[] = 'first';
+			if ( $loop == 0 )
+				$classes[] = 'active';
 
 			if ( ( $loop + 1 ) % $columns === 0 )
 				$classes[] = 'last';
@@ -54,11 +57,14 @@ if ( $attachment_ids ) {
 
 			$image_class = esc_attr( implode( ' ', $classes ) );
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $post->ID, $image_class );
+			//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $post->ID, $image_class );
+			echo '<div><div class="'.$image_class.'"><img class="item" src="'.$image_link.'" alt="" data-img="'.$image_link.'"></div></div>';
 
 			$loop++;
 		}
 
-	?></div>
+	?>
+	</div>
 	<?php
 }
+
