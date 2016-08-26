@@ -12,7 +12,11 @@
 	<![endif]-->
 	<?php wp_head();?>
 </head>
-<body <?php // body_class();?> class="<?php if(is_singular('product')){echo'project-page';}?>">
+<body <?php // body_class();?> class="<?php
+	if(is_singular('product')){echo'project-page';}
+	if(is_page_template( 'page_faq.php' )){echo'faq-page';}	
+	if(is_page_template( 'page_contact.php' )){ echo'contacts-page';}
+	?>">
 <header>
 	<div class="header-wrapper">
 		<div class="logo-wrapper">

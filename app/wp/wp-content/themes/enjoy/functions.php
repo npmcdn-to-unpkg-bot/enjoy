@@ -36,7 +36,7 @@ if (function_exists('register_sidebar')) {
 /* include theme settings */
 require_once(TEMPLATEPATH . '/functions/options.php');
 /* include post types */
-//require_once(TEMPLATEPATH . '/functions/post-type.php');
+require_once(TEMPLATEPATH . '/functions/post-type.php');
 /* include extra fields */
 require_once(TEMPLATEPATH . '/functions/extra-fields.php');
 /* Відключення оновлень */

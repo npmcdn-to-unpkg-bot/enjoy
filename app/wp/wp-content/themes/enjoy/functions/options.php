@@ -27,6 +27,8 @@ add_action( 'admin_print_styles', 'enjoy_add_init' );
 
 function register_mysettings() {
 //реєструємо наші налаштування
+register_setting( 'omr-settings-group', 'ok_email' );
+register_setting( 'omr-settings-group', 'ok_adresa' );
 register_setting( 'omr-settings-group', 'ok_ga_code' );
 register_setting( 'omr-settings-group', 'ok_facebook' );
 register_setting( 'omr-settings-group', 'ok_instagram' );
@@ -46,6 +48,14 @@ function omr_settings_page() {
 	</div>
 	<div class="rm_options">
 		<div class="rm_input rm_text">	
+			<p>
+				<label for="ok_email">Email:</label>
+				<input id="ok_email" type="text" size="90" name="ok_email" value="<?php echo get_option('ok_email'); ?>" />
+			</p>
+			<p>
+				<label for="ok_adresa" style="display:block;">Адреса</label>
+				<textarea class="multilang" name="ok_adresa" style="width:320px;height:150px;" type="textarea" ><?php echo get_option('ok_adresa'); ?></textarea>
+			</p>
 			<p>
 				<label for="ok_facebook">Facebook:</label>
 				<input id="ok_facebook" type="text" size="90" name="ok_facebook" value="<?php echo get_option('ok_facebook'); ?>" />
