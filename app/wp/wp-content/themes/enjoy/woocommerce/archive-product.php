@@ -19,89 +19,122 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+//get_header( 'shop' ); ?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
+	<!-- interactive -->
+	<div class="interactive">
+<div class="image" style="background:url('<?php bloginfo('template_directory'); ?>/pictures/interactive/image-2.jpg') no-repeat center;"></div>	</div>
+
+<!-- gallery -->
+<div class="row max-none collapse offer-items">
+	<div class="columns large-12">
+		<div class="items-wrapper">
+			<div>
+<?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post(); global $post, $product; ?>
+				<?php 				
+				$cat_img = get_post_meta( $post->ID, 'cat_img', true ); 
+				foreach((array)$cat_img as $cat_img){ 
+					if($cat_img['розміщення']=='left'){
+						$image_attributes = wp_get_attachment_image_src( $attachment_id = $cat_img['image'], $size = 'full' );
+						if($image_attributes[0]){?>				
+									<div class="item <?php echo $cat_img['тип-картинки']?>">
+										<div class="wrapper">
+											<div>
+												<div class="image" style="background:url('<?php echo $image_attributes[0];?>') no-repeat center"></div>
+												<h3 class="name"><span></span></h3>
+												<a href="#" class="order"></a>
+												<span class="price"><span></span> </span>
+											</div>
+										</div>
+									</div>			
+						<?php
+						}
+					}
+				 }			
+				?>				
+				<div class="item standard">
+					<div class="wrapper">
+						<div>
+<?php
+		if ( has_post_thumbnail() ) {
+			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+			$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
+			$image         = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+				'title'	=> get_the_title( get_post_thumbnail_id() )
+			) );
+
+			echo '<div class="image" style="background:url('.$image_link.') no-repeat center"></div>';
+
+		} else {
+
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div class="image" style="background:url(%s) no-repeat center"></div>', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+
+		}
 	?>
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
-
-		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook.
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-
-			<?php woocommerce_product_loop_start(); ?>
-
-				<?php woocommerce_product_subcategories(); ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook.
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-		<?php endif; ?>
-
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+							
+							<h3 class="name"><?php $terms = get_the_term_list( $_product->id, 'product_cat'); echo strip_tags($terms);?><span><?php the_title();?></span></h3>
+							<?php 
+							echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+								sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s order">%s</a>',
+									esc_url( $product->add_to_cart_url() ),
+									esc_attr( isset( $quantity ) ? $quantity : 1 ),
+									esc_attr( $product->id ),
+									esc_attr( $product->get_sku() ),
+									esc_attr( isset( $class ) ? $class : 'button' ),
+									esc_html( $product->add_to_cart_text() )
+								),
+							$product );?>
+							<span class="price"><span><?php echo $product->get_price_html();?></span> грн</span>
+						</div>
+					</div>
+				</div>
+				<?php 				
+				$cat_img = get_post_meta( $post->ID, 'cat_img', true ); 
+				foreach((array)$cat_img as $cat_img){ 
+					if($cat_img['розміщення']=='right'){
+						$image_attributes = wp_get_attachment_image_src( $attachment_id = $cat_img['image'], $size = 'full' );
+						if($image_attributes[0]){?>				
+									<div class="item <?php echo $cat_img['тип-картинки']?>">
+										<div class="wrapper">
+											<div>
+												<div class="image" style="background:url('<?php echo $image_attributes[0];?>') no-repeat center"></div>
+												<h3 class="name"><span></span></h3>
+												<a href="#" class="order"></a>
+												<span class="price"><span></span> </span>
+											</div>
+										</div>
+									</div>			
+						<?php
+						}
+					}
+				 }			
+				?>
+<?php endwhile; // end of the loop. ?>
+<?php endif; ?>
+				<!--<div class="item small-image">
+					<div class="wrapper">
+						<div>
+							<div class="image" style="background:url('pictures/img9.jpg') no-repeat center"></div>
+							<h3 class="name">крісло-груша<span>Quardro</span></h3>
+							<a href="#" class="order">Замовити</a>
+							<span class="price"><span>1254</span> грн</span>
+						</div>
+					</div>
+				</div>
+				<div class="item big-image">
+					<div class="wrapper">
+						<div>
+							<div class="image" style="background:url('pictures/img2.jpg') no-repeat center"></div>
+							<h3 class="name">крісло-груша<span>Quardro</span></h3>
+							<a href="#" class="order">Замовити</a>
+							<span class="price"><span>1254</span> грн</span>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer( 'shop' ); ?>

@@ -3,10 +3,10 @@
 		<div class="columns large-6 large-centered">
 			<div class="menu-wrapper">
 				<?php
-					if(function_exists('wp_nav_menu'))
+					/*if(function_exists('wp_nav_menu'))
 						wp_nav_menu( array( 'menu_class' => 'menu', 'container' => 'none', 'theme_location' => 'menu_footer') );
 					else
-						wp_page_menu('show_home=1&menu_class=menu&title_li=&depth=1&sort_column=menu_order');
+						wp_page_menu('show_home=1&menu_class=menu&title_li=&depth=1&sort_column=menu_order');*/
 				?>
 			</div>
 			<div class="social-wrapper">			
