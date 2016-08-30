@@ -24,6 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php if(is_product_category('for-everyday-life')){include('category_parts/part_for-everyday-life.php');}?>
 <?php if(is_product_category('kid-s')){include('category_parts/part_kid-s.php');}?>
 <?php if(is_product_category('paradise')){include('category_parts/part_paradise.php');}?>
+<?php if(is_product_category('sport')){include('category_parts/part_sport.php');}?>
+<?php if(is_product_category('home')){include('category_parts/part_home.php');}?>
 
 <!-- gallery -->
 <div class="row max-none collapse offer-items">
