@@ -1,0 +1,31 @@
+.woocommerce {
+	.shop-enjoy {
+		outline: 1px solid red;
+
+		// thead
+		.thead {
+			outline: 1px solid red;
+			padding: 8px 0;
+			> span {
+				display: table-cell;
+				width: 1%;
+					text-align: center;
+			}
+		}
+
+		// tbody
+		.tbody {
+			outline: 1px solid red;
+
+			.remove {
+				display: inline-block;
+			}
+
+			
+		}
+	}
+
+	.cart-collaterals {
+		outline: 1px solid #555;
+	}
+}

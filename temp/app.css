@@ -3284,6 +3284,22 @@ footer {
     width: calc(100% - 315px - 8px);
     padding: 0 0 0 85px; } }
 
+.woocommerce .shop-enjoy {
+  outline: 1px solid red; }
+  .woocommerce .shop-enjoy .thead {
+    outline: 1px solid red;
+    padding: 8px 0; }
+    .woocommerce .shop-enjoy .thead > span {
+      display: table-cell;
+      width: 1%;
+      text-align: center; }
+  .woocommerce .shop-enjoy .tbody {
+    outline: 1px solid red; }
+    .woocommerce .shop-enjoy .tbody .remove {
+      display: inline-block; }
+.woocommerce .cart-collaterals {
+  outline: 1px solid #555555; }
+
 @keyframes waves {
   0% {
     transform: translateY(0px); }
