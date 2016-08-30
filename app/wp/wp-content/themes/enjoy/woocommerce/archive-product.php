@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //get_header( 'shop' ); ?>
-
-	<!-- interactive -->
-	<div class="interactive">
-<div class="image" style="background:url('<?php bloginfo('template_directory'); ?>/pictures/interactive/image-2.jpg') no-repeat center;"></div>	</div>
+<?php if(is_product_category('accessories')){include('category_parts/part_accessories.php');}?>
+<?php if(is_product_category('for-everyday-life')){include('category_parts/part_for-everyday-life.php');}?>
+<?php if(is_product_category('kid-s')){include('category_parts/part_kid-s.php');}?>
+<?php if(is_product_category('paradise')){include('category_parts/part_paradise.php');}?>
 
 <!-- gallery -->
 <div class="row max-none collapse offer-items">
