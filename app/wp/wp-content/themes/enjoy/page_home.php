@@ -25,38 +25,38 @@ Template Name: Home
 		<div class="columns large-12 items-wrapper">
 			
 			<div class="item item-1">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/accessories/" class="button"></a>
 				<p class="name">#accwssories</p>
 				<p class="text">Ми цінуємо твою індивідуальність.<br>Твій стиль набагато важливіший,<br>ніж мода</p>
 				<div class="image"></div>
 				<div class="number"></div>
 			</div>
 			<div class="item item-2">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/for-everyday-life/" class="button"></a>
 				<p class="name">#accwssories</p>
 				<div class="image"></div>
 				<div class="number"></div>
 			</div>
 			<div class="item item-3">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/paradise/" class="button"></a>
 				<p class="name">#accwssories</p>
 				<div class="image"></div>
 				<div class="number"></div>
 			</div>
 			<div class="item item-4">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/kid-s/" class="button"></a>
 				<p class="name">#kids</p>
 				<div class="image"></div>
 				<div class="number"></div>
 			</div>
 			<div class="item item-5">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/" class="button"></a>
 				<p class="name">#for outdoor</p>
 				<div class="image"></div>
 				<div class="number"></div>
 			</div>
 			<div class="item item-6">
-				<a href="#" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/sport/" class="button"></a>
 				<p class="name">#for outdoor</p>
 				<div class="image"></div>
 				<div class="number"></div>

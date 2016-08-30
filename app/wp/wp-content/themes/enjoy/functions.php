@@ -66,4 +66,9 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-
+// Remove all currency symbols
+function sww_remove_wc_currency_symbols( $currency_symbol, $currency ) {
+     $currency_symbol = '';
+     return $currency_symbol;
+}
+add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
