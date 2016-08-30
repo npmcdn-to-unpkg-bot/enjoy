@@ -1,0 +1,42 @@
+.interactive {
+	position: relative;
+	top: calc(-80px - 1px);
+
+	// image
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// text
+	.text-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.tab {
+			display: table;
+			height: 100%;
+			margin: 0 auto;
+			.cell {
+				display: table-cell;
+				vertical-align: middle;
+				.wrapper {
+
+				}
+			}
+		}
+	}
+
+
+
+	@import "accesories";
+	@import "foreveryday";
+	@import "kids";
+	@import "paradise";
+	@import "sportness";
+}

@@ -1876,6 +1876,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  background: white;
   border-bottom: 1px solid #efefef; }
   header .header-wrapper {
     padding: 0 16px;
@@ -3421,6 +3422,33 @@ footer {
       display: inline-block; }
 .woocommerce .cart-collaterals {
   outline: 1px solid #555555; }
+
+.interactive {
+  position: relative;
+  top: -webkit-calc(-80px - 1px);
+  top: calc(-80px - 1px); }
+  .interactive .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .interactive .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .interactive .text-wrapper .tab {
+      display: table;
+      height: 100%;
+      margin: 0 auto; }
+      .interactive .text-wrapper .tab .cell {
+        display: table-cell;
+        vertical-align: middle; }
+  .interactive .text-wrapper .tab .cell .wrapper {
+    margin: -12vw 0 0 -32vw;
+    max-width: 30vw; }
 
 @-webkit-keyframes waves {
   0% {
