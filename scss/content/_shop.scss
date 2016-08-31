@@ -2,10 +2,6 @@
 // step 1
 .woocommerce {
 	.shop-enjoy {
-		position: relative;
-		&:after {
-			content: '';
-		}
 		//outline: 1px solid red;
 		.details {
 			float: left;
@@ -18,18 +14,16 @@
 		.thead {
 			display: none;
 			padding: 0 0 26px 0;
-			margin: 0 0 36px 0;
-			border-bottom: 1px solid $border;
-			//outline: 1px solid red;
 				font-size: 0;
 				white-space: nowrap;
 			> span {
-				//outline: 1px solid #999;
+				outline: 1px solid red;
 				padding: 4px 16px;
 				display: inline-block;
 				vertical-align: top;
 					font-size: 20px;
 					font-weight: 300;
+					text-align: right;
 				&.product-remove {
 					display: none;
 				}
@@ -54,11 +48,25 @@
 
 		// tbody
 		.tbody {
-			//outline: 1px solid red;
+			position: relative;
+			padding: 100px 0;
+				color: #fff;
+				font-weight: 300;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100vw;
+				height: 100%;
+				background: $color-1;
+				z-index: -1;
+			}
 				font-size: 0px;
 
 			> div, > a, > span {
-				//outline: 1px solid #999 !important;
+				outline: 1px solid red;
 				padding: 8px 16px;
 				display: block;
 				width: 100%;
@@ -113,10 +121,8 @@
 			// name
 			.name {
 				text-decoration: none;
-				color: $color-1;
-				font-size: 20px;
-				font-weight: 300;
-				line-height: 100%;
+				line-height: 120%;
+				color: #fff;
 			}
 
 			// variation
@@ -164,10 +170,7 @@
 				}
 			}
 			.quantity + .woocommerce-Price-amount {
-				color: $color-1;
-				font-size: 20px;
-				font-weight: 300;
-				line-height: 100%;
+				
 			}
 
 			// coupon
@@ -230,6 +233,7 @@
 			background-color: none;
 		}
 		table.shop_table {
+			float: right;
 			max-width: 180px;
 			margin: 0 0 32px 0;
 			border-radius: 0;
@@ -265,8 +269,10 @@
 		.cart_totals.calculated_shipping {
 			float: none;
 			width: 100%;
+				text-align: right;
 		}
 		.wc-proceed-to-checkout {
+			clear: both;
 			.button {
 				background: none;
 				border: 1px solid $color-1;
