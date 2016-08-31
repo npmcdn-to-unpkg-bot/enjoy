@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<div class="thead">
 			<span class="product-remove">&nbsp;</span>
 			<span class="product-thumbnail">&nbsp;</span>
-			<span class="product-name"><?php _e( 'Опис продукту', 'woocommerce' ); ?></span>
+			<span class="product-name"><?php _e( 'Опис товару', 'woocommerce' ); ?></span>
 			<span class="product-price"><?php _e( 'Ціна', 'woocommerce' ); ?></span>
 			<span class="product-quantity"><?php _e( 'К-ть', 'woocommerce' ); ?></span>
 			<span class="product-subtotal"><?php _e( 'Сума', 'woocommerce' ); ?></span>

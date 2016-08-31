@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="variation">
-	<span class="details">Опис товару:</span>
+	<span class="details" style="display:none">Опис товару:</span>
 	<?php foreach ( $item_data as $data ) : ?>
 		<div class="item">
 			<div class="type variation-<?php echo sanitize_html_class( $data['key'] ); ?>"><?php echo wp_kses_post( $data['key'] ); ?>:</div>
