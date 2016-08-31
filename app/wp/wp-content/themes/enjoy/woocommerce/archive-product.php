@@ -114,26 +114,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 <?php endwhile; // end of the loop. ?>
 <?php endif; ?>
-				<!--<div class="item small-image">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('pictures/img9.jpg') no-repeat center"></div>
-							<h3 class="name">крісло-груша<span>Quardro</span></h3>
-							<a href="#" class="order">Замовити</a>
-							<span class="price"><span>1254</span> грн</span>
-						</div>
-					</div>
-				</div>
-				<div class="item big-image">
-					<div class="wrapper">
-						<div>
-							<div class="image" style="background:url('pictures/img2.jpg') no-repeat center"></div>
-							<h3 class="name">крісло-груша<span>Quardro</span></h3>
-							<a href="#" class="order">Замовити</a>
-							<span class="price"><span>1254</span> грн</span>
-						</div>
-					</div>
-				</div>-->
 			</div>
 		</div>
 	</div>
