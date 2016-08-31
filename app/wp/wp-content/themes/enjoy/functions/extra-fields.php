@@ -21,6 +21,10 @@ function page_extra_fields_box_func($post){ ?>
 		<label style="width:150px; display:inline-block;">Лозунг 2</label>
 		<input type="text" size="90" name="extra[page_title_2]" value="<?php echo get_post_meta($post->ID, 'page_title_2', true); ?>" />
 	</p>
+	<p>
+		<label style="width:150px; display:inline-block;">Лозунг 3</label>
+		<input type="text" size="90" name="extra[page_title_3]" value="<?php echo get_post_meta($post->ID, 'page_title_3', true); ?>" />
+	</p>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 <?php
 }
