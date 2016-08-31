@@ -18,9 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<dl class="variation">
+<div class="variation">
+	<span class="details">Опис товару:</span>
 	<?php foreach ( $item_data as $data ) : ?>
-		<dt class="variation-<?php echo sanitize_html_class( $data['key'] ); ?>"><?php echo wp_kses_post( $data['key'] ); ?>:</dt>
-		<dd class="variation-<?php echo sanitize_html_class( $data['key'] ); ?>"><?php echo wp_kses_post( wpautop( $data['display'] ) ); ?></dd>
+		<div class="item">
+			<div class="type variation-<?php echo sanitize_html_class( $data['key'] ); ?>"><?php echo wp_kses_post( $data['key'] ); ?>:</div>
+			<div class="value variation-<?php echo sanitize_html_class( $data['key'] ); ?>"><?php echo wp_kses_post( wpautop( $data['display'] ) ); ?><span class="coma">, </span></div>
+		</div>
 	<?php endforeach; ?>
-</dl>
+</div>

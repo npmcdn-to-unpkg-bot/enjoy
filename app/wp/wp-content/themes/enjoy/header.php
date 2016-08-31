@@ -20,7 +20,7 @@
 <header>
 	<div class="header-wrapper">
 		<div class="logo-wrapper">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="">
+			<a href="<?php echo get_option('home');?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt=""></a>
 		</div>
 		<div class="menu-wrapper">
 			<?php

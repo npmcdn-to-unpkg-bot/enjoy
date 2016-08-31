@@ -50,7 +50,7 @@ Template Name: Home
 				<div class="number"></div>
 			</div>
 			<div class="item item-5">
-				<a href="<?php echo get_option('home');?>/" class="button"></a>
+				<a href="<?php echo get_option('home');?>/product-category/home/" class="button"></a>
 				<p class="name">#for outdoor</p>
 				<div class="image"></div>
 				<div class="number"></div>

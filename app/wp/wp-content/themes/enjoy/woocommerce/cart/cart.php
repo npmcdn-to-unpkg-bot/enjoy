@@ -31,10 +31,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<div class="thead">
 			<span class="product-remove">&nbsp;</span>
 			<span class="product-thumbnail">&nbsp;</span>
-			<span class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></span>
-			<span class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></span>
-			<span class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></span>
-			<span class="product-subtotal"><?php _e( 'Загальна сума', 'woocommerce' ); ?></span>
+			<span class="product-name"><?php _e( 'Опис продукту', 'woocommerce' ); ?></span>
+			<span class="product-price"><?php _e( 'Ціна', 'woocommerce' ); ?></span>
+			<span class="product-quantity"><?php _e( 'К-ть', 'woocommerce' ); ?></span>
+			<span class="product-subtotal"><?php _e( 'Сума', 'woocommerce' ); ?></span>
 		</div>
 		<div class="tbody">
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
@@ -51,7 +51,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<td class="product-remove">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-									'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+									'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s"></a>',
 									esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 									__( 'Remove this item', 'woocommerce' ),
 									esc_attr( $product_id ),
@@ -67,7 +67,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								if ( ! $_product->is_visible() ) {
 									echo $thumbnail;
 								} else {
-									printf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $thumbnail );
+									printf( '<a href="%s" class="photo">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $thumbnail );
 								}
 							?>
 						</td>
@@ -77,7 +77,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								if ( ! $_product->is_visible() ) {
 									echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
 								} else {
-									echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $_product->get_title() ), $cart_item, $cart_item_key );
+									echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" class="name"><span class="details">Назва:</span> %s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $_product->get_title() ), $cart_item, $cart_item_key );
 								}
 
 								// Meta data
@@ -113,7 +113,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-subtotal" data-title="<?php _e( 'Загальна сума', 'woocommerce' ); ?>">
+						<td class="product-subtotal" data-title="<?php _e( 'Сума', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 							?>
@@ -146,6 +146,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</tr>
 
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+
 		</div>
 	</div>
 
