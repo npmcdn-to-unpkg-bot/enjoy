@@ -48,10 +48,10 @@ $col = 1;
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
 	<div class="col-<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> address">
-		<header class="title">
+		<div class="title">
 			<h3><?php echo $title; ?></h3>
 			<a href="<?php echo wc_get_endpoint_url( 'edit-address', $name ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
-		</header>
+		</div>
 		<address>
 			<?php
 				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(

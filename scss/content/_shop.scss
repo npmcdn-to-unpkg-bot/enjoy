@@ -3,6 +3,11 @@
 		overflow: hidden;
 	}
 }
+.woocommerce {
+	.woocommerce-error, .woocommerce-info, .woocommerce-message {
+		margin: 0 0 60px !important;
+	}
+}
 
 // step 1
 .woocommerce {
@@ -393,8 +398,12 @@
 
 	// деталі замовлення
 	#customer_details {
+		.col-1, .col-2 {
+			float: none;
+			width: 100%;
+		}
 		h3 {
-			margin: 0 0 40px 0;
+			margin: 0 0 30px 0;
 		}
 		label {
 			padding: 0 0 8px 0;
@@ -412,6 +421,15 @@
 			border-radius: 26px;
 			border: 1px solid #eaeaea;
 			padding: 8px 16px;
+			.select2-arrow {
+				width: 50px;
+				b:after {
+					border: 6px solid transparent;
+					border-top-color: $border;
+					margin-left: -11px;
+					margin-top: -2px;
+				}
+			}
 		}
 		// left
 		.woocommerce-billing-fields {
@@ -421,7 +439,9 @@
 		}
 		// right
 		.woocommerce-shipping-fields {
-			
+			h3 {
+				margin: 64px 0 30px 0;
+			}
 		}
 	}
 
@@ -434,7 +454,6 @@
 			border: none;
 			margin: 0 0 48px 0;
 			border-radius: 0;
-			max-width: 48%;
 			td, th {
 				padding: 15px 0;
 			}
@@ -472,6 +491,150 @@
 		.order-total {
 			td {
 				text-align: right;
+			}
+		}
+	}
+
+	@media #{$x_tablet-up} {						// 1025
+		#customer_details {
+			.col-1, .col-2 {
+				float: left;
+				width: 48%;
+			}
+			.col-2 {
+				float: right;
+			}
+			.woocommerce-shipping-fields {
+				h3 {
+					margin: 0 0 30px 0;
+				}
+			}
+		}
+		.woocommerce-checkout-review-order {
+			table.shop_table {
+				max-width: 48%;
+			}
+		}
+	}
+}
+
+// step 3
+.woocommerce {
+	.woocommerce-thankyou-order-received {
+		margin: 0;
+	}
+	.woocommerce-thankyou-order-details.order_details {
+		padding: 0;
+		margin: 16px 0;
+		li {
+			float: none;
+			text-transform: uppercase;
+			font-size: 12px;
+			line-height: 100%;
+			border-right: none;
+			border-bottom: 1px solid $border;
+			padding: 24px 30px 16px 0;
+			strong {
+				display: block;
+				margin: 4px 0 0 0;
+					font-size: 30px;
+					text-transform: none;
+					line-height: 140%;
+					color: $color-1;
+					font-weight: 300;
+			}
+		}
+	}
+	.order-details {
+		h3 {
+			margin: 64px 0 30px;
+		}
+		table.shop_table {
+			border: none;
+			margin: 0;
+			border-radius: 0;
+			th, td {
+				padding: 15px 0;
+				border-top: 1px solid $border;
+			}
+			thead {
+				.product-total {
+					text-align: right;
+				}
+				th {
+					border: none;
+				}
+			}
+			tbody {
+				.product-name {
+					a {
+						color: $color-1;
+						text-decoration: none;
+					}
+					.variation {
+						margin: 0;
+						dt {
+							display: none;
+						}
+						dd {
+							padding: 0;
+							margin: 0;
+							float: none;
+							p {
+								margin: 0;
+							}
+						}
+					}
+				}
+				.product-total {
+					text-align: right;
+				}
+			}
+			tfoot {
+				td {
+					text-align: right;
+				}
+			}
+		}
+	}
+	.details-client {
+		h3 {
+			margin: 64px 0 30px;
+		}
+		table.shop_table {
+			border: none;
+			margin: 0;
+			border-radius: 0;
+			th, td {
+				border-top: 1px solid $border;
+				padding: 15px 0;
+			}
+			tbody {
+				td {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	@media #{$x_tablet-up} {						// 1025
+		.woocommerce-thankyou-order-details.order_details {
+			li {
+				float: left;
+				padding: 12px 2vw 2px 0;
+				margin: 8px 2vw 8px 0;
+				border-right: 1px solid $border;
+				border-bottom: none;
+			}
+		}
+		.order-details {
+			table.shop_table {
+				width: 48%;
+			}
+		}
+		.details-client {
+			table.shop_table {
+				width: 48%;
 			}
 		}
 	}
