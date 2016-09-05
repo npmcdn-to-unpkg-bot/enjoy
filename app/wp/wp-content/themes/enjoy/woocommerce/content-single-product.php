@@ -175,7 +175,10 @@ global $post, $product;
 				</div>
 			</div>
 		</div>
-		<span class="close">Застосувати</span>
+		<div class="buttons">
+			<span class="add">Застосувати</span>
+			<span class="close"></span>
+		</div>
 	</div>
 </div>
 
@@ -284,7 +287,7 @@ global $post, $product;
 
 		<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-	</div>
+	
 	<!-- gallery -->
 	<div class="row max-none collapse gallery-items">
 		<div class="columns large-12">
@@ -437,6 +440,7 @@ foreach( $items as $item){
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 <!-- #product-<?php the_ID(); ?> -->
 
