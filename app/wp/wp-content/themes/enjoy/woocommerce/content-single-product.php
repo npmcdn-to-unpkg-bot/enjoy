@@ -206,60 +206,32 @@ global $post, $product;
 						<!-- property -->
 						<div class="property">
 							<h1 class="name" itemprop="name"><?php echo strip_tags($product->get_categories(''));?><span><?php the_title();?></span></h1>
+							
+							
+<?php
+				/**
+				 * woocommerce_single_product_summary hook.
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_rating - 10
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+			?>
+							
+							
 							<div class="choice-wrapper clearfix">
 								<div class="choice-material">
 									<p class="title">Матеріал</p>
 									<div class="wrapper">
 										<div class="elect elect-materials" style=""></div>
 										<div class="rainbow rainbow-materials">
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-1"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/2.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/2.jpg" data-item="item-2"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-3"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/5.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/5.jpg" data-item="item-4"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/6.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/6.jpg" data-item="item-5"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg" data-item="item-6"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg" data-item="item-7"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg" data-item="item-8"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-9"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-10"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-11"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-12"></span>
-												<p>Тканина 1</p>
-											</div>
+											
+											
 										</div>
 									</div>
 								</div>
@@ -268,91 +240,14 @@ global $post, $product;
 									<div class="wrapper">
 										<div class="elect elect-colors" style=""></div>
 										<div class="rainbow rainbow-colors">
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-1"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/2.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/2.jpg" data-item="item-2"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-3"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/5.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/5.jpg" data-item="item-4"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/6.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/6.jpg" data-item="item-5"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg" data-item="item-6"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg" data-item="item-7"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg" data-item="item-8"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-9"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-10"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-11"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-12"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/4.jpg" data-item="item-13"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/8.jpg" data-item="item-14"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/7.jpg" data-item="item-15"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-16"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-17"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/1.jpg" data-item="item-18"></span>
-												<p>Тканина 1</p>
-											</div>
-											<div>
-												<span class="item" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg') no-repeat center" data-img="<?php bloginfo('stylesheet_directory'); ?>/pictures/materials/3.jpg" data-item="item-19"></span>
-												<p>Тканина 1</p>
-											</div>
+											
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="small-sizes">
 								<div class="size-1">
-									<span class="active">S</span>
-									<span>M</span>
-									<span>L</span>
+									
 								</div>
 								<div class="size-2">
 									<div class="height"><span>70</span> см</div>
@@ -374,20 +269,6 @@ global $post, $product;
 			</div>
 		</div>
 	</div>
-<?php
-				/**
-				 * woocommerce_single_product_summary hook.
-				 *
-				 * @hooked woocommerce_template_single_title - 5
-				 * @hooked woocommerce_template_single_rating - 10
-				 * @hooked woocommerce_template_single_price - 10
-				 * @hooked woocommerce_template_single_excerpt - 20
-				 * @hooked woocommerce_template_single_add_to_cart - 30
-				 * @hooked woocommerce_template_single_meta - 40
-				 * @hooked woocommerce_template_single_sharing - 50
-				 */
-				do_action( 'woocommerce_single_product_summary' );
-			?>
 			
 
 		<?php
@@ -398,7 +279,7 @@ global $post, $product;
 			 * @hooked woocommerce_upsell_display - 15
 			 * @hooked woocommerce_output_related_products - 20
 			 */
-			do_action( 'woocommerce_after_single_product_summary' );
+		//	do_action( 'woocommerce_after_single_product_summary' );
 		?>
 
 		<meta itemprop="url" content="<?php the_permalink(); ?>" />
@@ -428,9 +309,135 @@ foreach( $items as $item){
 				
 <?php
  }
-?>				
+?>				</div>
+			</div>
+		</div>
 	</div>
-</div>
+
+<!-- guarantee -->
+	<div class="row max-none guarantee">
+		<div class="columns large-12">
+			<div class="row">
+				<div class="columns large-12">
+					<div class="text-wrapper">
+						<h2>М’яке і легке крісло</h2>
+						<div class="description">
+							<p>вдосконалений<br>наповнювач</p>
+							<span class="str"></span>
+							<p>не просідає<br>(гарантія 12 місяців)</p>
+							<span class="plus"></span>
+							<p>додатковий<br>безкоштовно</p>
+						</div>
+						<a href="#" class="order">Замовити</a>
+					</div>
+					<div class="image-wrapper clearfix">
+						<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img13.png') no-repeat;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- waves -->
+	<div class="row max-none waves-wrapper" id="waves">
+		<div class="columns large-12">
+			<h2 class="text">Можна плюхкатись</h2>
+			<div class="layer image waves waves-1" data-depth="0.05">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/waves/waves1.png" alt="">
+			</div>
+			<div class="layer image waves waves-2" data-depth="0.2">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/waves/waves2.png" alt="">
+			</div>
+			<div class="layer image waves waves-3" data-depth="0.45">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/waves/waves3.png" alt="">
+			</div>
+			<div class="layer image girls girls-1" data-depth="0.12">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/waves/girls1.png" alt="">
+			</div>
+			<div class="layer image girls girls-2" data-depth="0.12">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/waves/girls2.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<!-- sizes -->
+	<div class="row sizes">
+		<div class="columns large-12">
+			<div class="row extended">
+				<div class="columns large-12">
+					<div class="content clearfix">
+						<div class="item">
+							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img9.png') no-repeat center"></div>
+							<p class="description"><span>L</span>Ріст 176 - 180 см</p>
+							<div class="width"><span><span>70</span> см</span></div>
+							<div class="height"><span><span>90</span> см</span></div>
+						</div>
+						<div class="item">
+							<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img10.png') no-repeat center"></div>
+							<p class="description"><span>L</span>Ріст 176 - 180 см</p>
+							<div class="width"><span><span>70</span> см</span></div>
+							<div class="height"><span><span>90</span> см</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- delivery -->
+	<div class="row delivery">
+		<div class="columns large-12">
+			<div class="row">
+				<div class="columns large-12">
+					<div class="content">
+						<p>Виконується за 1-3 дні. Доставка до дверей</p>
+						<a href="#" class="order">Замовити</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- standard items -->
+	<div class="row max-none collapse offer-items accessories">
+		<div class="columns large-12">
+			<h2>Аксесуари</h2>
+			<div class="items-wrapper">
+				<div>
+					<div class="item ">
+						<div class="wrapper">
+							<div>
+								<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img6.png') no-repeat center"></div>
+								<h3 class="name">крісло-груша<span>Quardro</span></h3>
+								<a href="#" class="order">Замовити</a>
+								<span class="price"><span>1254</span> грн</span>
+							</div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrapper">
+							<div>
+								<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img7.png') no-repeat center"></div>
+								<h3 class="name">крісло-груша<span>Quardro</span></h3>
+								<a href="#" class="order">Замовити</a>
+								<span class="price"><span>1254</span> грн</span>
+							</div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrapper">
+							<div>
+								<div class="image" style="background:url('<?php bloginfo('stylesheet_directory'); ?>/pictures/img8.png') no-repeat center"></div>
+								<h3 class="name">крісло-груша<span>Quardro</span></h3>
+								<a href="#" class="order">Замовити</a>
+								<span class="price"><span>1254</span> грн</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

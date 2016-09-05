@@ -228,6 +228,7 @@
 		};
 	};
 
+
 	function chooser() {
 		// вибір вигляду крісла
 		$('.project .small-images .item').on('click', function() {
@@ -248,6 +249,8 @@
 		});
 
 		// вибір матеріалу
+				
+		
 		// (при кліку на превюшку)
 		$('.rainbow-materials div .item').on('click', function() {
 			var dataItem =  $(this).attr('data-item');
@@ -345,6 +348,16 @@
 
 
 
-
+		
+	// створення списку матеріалів		
+	function matList(options){
+		alert(1);
+		options.each(
+			function(){
+				t = $(this).val();
+				alert(1);
+			});
+		}
+	matList($("#pa_material option"));
 
 })();

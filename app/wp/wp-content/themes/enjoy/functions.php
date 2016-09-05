@@ -72,3 +72,21 @@ function sww_remove_wc_currency_symbols( $currency_symbol, $currency ) {
      return $currency_symbol;
 }
 add_filter('woocommerce_currency_symbol', 'sww_remove_wc_currency_symbols', 10, 2);
+
+
+
+add_filter( 'wc_additional_variation_images_main_images_class', 'variation_swap_main_image_class' );
+function variation_swap_main_image_class() {
+	return '.project .constructor .images-wrapper .home-image > div';
+}
+
+add_filter( 'wc_additional_variation_images_gallery_images_class', 'variation_swap_gallery_image_class' );
+
+function variation_swap_gallery_image_class() {
+	return '.project .constructor .images-wrapper .small-images';
+}
+
+add_filter( 'wc_additional_variation_images_custom_swap', '__return_true' );
+add_filter( 'wc_additional_variation_images_custom_reset_swap', '__return_true' );
+add_filter( 'wc_additional_variation_images_custom_original_swap', '__return_true' );
+add_filter( 'wc_additional_variation_images_get_first_image', '__return_true' );
