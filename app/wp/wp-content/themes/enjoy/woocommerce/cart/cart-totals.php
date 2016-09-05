@@ -24,13 +24,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php _e( 'Всього в кошику', 'woocommerce' ); ?></h2>
+	<h2 style="display:none"><?php _e( 'Всього в кошику', 'woocommerce' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Всього:', 'woocommerce' ); ?></th>
-			<td data-title="<?php _e( 'Всього:', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php _e( 'Всього', 'woocommerce' ); ?></th>
+			<td data-title="<?php _e( 'Всього', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -88,8 +88,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Сума:', 'woocommerce' ); ?></th>
-			<td data-title="<?php _e( 'Сума:', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<th><?php _e( 'Сума', 'woocommerce' ); ?></th>
+			<td data-title="<?php _e( 'Сума', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

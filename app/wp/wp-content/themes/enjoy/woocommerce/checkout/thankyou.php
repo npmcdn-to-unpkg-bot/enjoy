@@ -34,10 +34,10 @@ if ( $order ) : ?>
 
 	<?php else : ?>
 
-		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Дякуємо. Ваше замовлення прийняте', 'woocommerce' ), $order ); ?></p>
+		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Дякуємо :)<br>Ваше замовлення прийняте', 'woocommerce' ), $order ); ?></p>
 
 		<ul class="woocommerce-thankyou-order-details order_details">
-			<li class="order">
+			<li class="_order">
 				<?php _e( 'Номер замовлення:', 'woocommerce' ); ?>
 				<strong><?php echo $order->get_order_number(); ?></strong>
 			</li>
@@ -60,11 +60,11 @@ if ( $order ) : ?>
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+	<!--?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?-->
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>
 
-	<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Дякую. Ваше замовлення прийняте', 'woocommerce' ), null ); ?></p>
+	<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Дякуємо :)<br>Ваше замовлення прийняте', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>

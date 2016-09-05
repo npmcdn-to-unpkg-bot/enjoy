@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<div class="thead">
 			<span class="product-remove">&nbsp;</span>
 			<span class="product-thumbnail">&nbsp;</span>
-			<span class="product-name"><?php _e( 'Опис продукту', 'woocommerce' ); ?></span>
+			<span class="product-name"><?php _e( 'Опис товару', 'woocommerce' ); ?></span>
 			<span class="product-price"><?php _e( 'Ціна', 'woocommerce' ); ?></span>
 			<span class="product-quantity"><?php _e( 'К-ть', 'woocommerce' ); ?></span>
 			<span class="product-subtotal"><?php _e( 'Сума', 'woocommerce' ); ?></span>
@@ -129,7 +129,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<td colspan="6" class="actions">
 
 					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
+						<div class="coupon" style="display: none">
 
 							<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
 
