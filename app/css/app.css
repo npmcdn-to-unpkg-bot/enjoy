@@ -1483,9 +1483,13 @@ h1 {
   h1 span {
     display: block;
     font-size: 18px;
-    line-height: 110%;
-    color: #5e5e5e;
+    line-height: 120%;
+    color: #989898;
     text-transform: none; }
+    h1 span:nth-of-type(1) {
+      margin: 0 0 12px 0; }
+    h1 span:nth-of-type(2) {
+      margin: 12px 0 0 0; }
   @media only screen and (min-width:641px) {
     h1 {
       font-size: 50px; }
@@ -2062,9 +2066,9 @@ footer {
         width: 100%;
         height: 100%; }
       footer .social-wrapper a.face:after {
-        background: url(../img/social/facebook.png) no-repeat center; }
+        background: url(../img/face.svg) no-repeat center; }
       footer .social-wrapper a.insta:after {
-        background: url(../img/social/instagram.png) no-repeat center; }
+        background: url(../img/insta.svg) no-repeat center; }
   footer .copyring {
     line-height: 100%; }
     footer .copyring p {
@@ -2105,11 +2109,11 @@ footer {
     font-weight: 300;
     line-height: 140%; }
   .enjoy .content .item-1 {
-    background: url(../img/advant-1.png) no-repeat top center; }
+    background: url(../img/home/icons-07.svg) no-repeat top center; }
   .enjoy .content .item-2 {
-    background: url(../img/advant-2.png) no-repeat top center; }
+    background: url(../img/home/icons-08.svg) no-repeat top center; }
   .enjoy .content .item-3 {
-    background: url(../img/advant-3.png) no-repeat top center; }
+    background: url(../img/home/icons-09.svg) no-repeat top center; }
   @media only screen and (min-width:641px) {
     .enjoy {
       padding: 160px 0; }
@@ -3344,41 +3348,74 @@ footer {
 
 .contacts-page .text-wrapper {
   width: 100%; }
-  .contacts-page .text-wrapper .text {
-    margin: 0 0 64px 0; }
-    .contacts-page .text-wrapper .text p {
-      margin: 0 0 8px 0; }
-    .contacts-page .text-wrapper .text a {
-      color: #5c267f;
-      text-decoration: none; }
-  .contacts-page .text-wrapper .form-wrapper form input:not(.button), .contacts-page .text-wrapper .form-wrapper form textarea {
-    width: 100%;
-    display: block;
-    border: 1px solid #eaeaea;
-    outline: none;
-    padding: 14px 16px;
-    margin: 0 0 16px 0; }
-    .contacts-page .text-wrapper .form-wrapper form input:not(.button)::-webkit-input-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea::-webkit-input-placeholder {
-      color: #7e7e7e;
-      opacity: 0.55;
-      font-weight: 300; }
-    .contacts-page .text-wrapper .form-wrapper form input:not(.button)::-moz-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea::-moz-placeholder {
-      color: #7e7e7e;
-      opacity: 0.55;
-      font-weight: 300; }
-    .contacts-page .text-wrapper .form-wrapper form input:not(.button):-ms-input-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea:-ms-input-placeholder {
-      color: #7e7e7e;
-      opacity: 0.55;
-      font-weight: 300; }
-  .contacts-page .text-wrapper .form-wrapper form input.button {
-    outline: none;
-    background: transparent; }
-  .contacts-page .text-wrapper .form-wrapper form textarea {
-    max-width: 100%;
-    height: 120px;
-    max-height: 120px; }
+  .contacts-page .text-wrapper .text p {
+    margin: 0 0 8px 0; }
+  .contacts-page .text-wrapper .text a {
+    color: #5c267f;
+    text-decoration: none; }
+  .contacts-page .text-wrapper .text h3 {
+    margin: 0 0 32px 0; }
+  .contacts-page .text-wrapper .form-wrapper {
+    margin: 80px 0 0 0; }
+    .contacts-page .text-wrapper .form-wrapper form {
+      position: relative; }
+      .contacts-page .text-wrapper .form-wrapper form input:not(.button), .contacts-page .text-wrapper .form-wrapper form textarea {
+        width: 100%;
+        display: block;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: transparent transparent #eaeaea transparent;
+        outline: none;
+        padding: 14px 16px;
+        margin: 0 0 30px 0; }
+        .contacts-page .text-wrapper .form-wrapper form input:not(.button)::-webkit-input-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea::-webkit-input-placeholder {
+          color: #7e7e7e;
+          opacity: 0.55;
+          font-weight: 300; }
+        .contacts-page .text-wrapper .form-wrapper form input:not(.button)::-moz-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea::-moz-placeholder {
+          color: #7e7e7e;
+          opacity: 0.55;
+          font-weight: 300; }
+        .contacts-page .text-wrapper .form-wrapper form input:not(.button):-ms-input-placeholder, .contacts-page .text-wrapper .form-wrapper form textarea:-ms-input-placeholder {
+          color: #7e7e7e;
+          opacity: 0.55;
+          font-weight: 300; }
+        .contacts-page .text-wrapper .form-wrapper form input:not(.button).wpcf7-not-valid, .contacts-page .text-wrapper .form-wrapper form textarea.wpcf7-not-valid {
+          border-color: transparent transparent red transparent; }
+      .contacts-page .text-wrapper .form-wrapper form input[type="submit"] {
+        outline: none;
+        background: transparent;
+        display: inline-block;
+        border: 1px solid #5c267f;
+        border-radius: 6.25em;
+        padding: 0.9375em 2.625em;
+        margin: 18px 0 76px 0;
+        width: auto;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #5c267f; }
+      .contacts-page .text-wrapper .form-wrapper form textarea {
+        max-width: 100%;
+        height: 120px;
+        max-height: 120px; }
+      .contacts-page .text-wrapper .form-wrapper form span[role="alert"] {
+        display: none; }
+      .contacts-page .text-wrapper .form-wrapper form .wpcf7-response-output {
+        display: block;
+        position: relative;
+        bottom: 66px;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        line-height: 140%; }
+        .contacts-page .text-wrapper .form-wrapper form .wpcf7-response-output.wpcf7-validation-errors {
+          color: red; }
+        .contacts-page .text-wrapper .form-wrapper form .wpcf7-response-output.wpcf7-mail-sent-ok {
+          color: #5c267f; }
 .contacts-page .map-wrapper {
-  margin: 40px 0 0 0;
   width: 100%;
   height: 260px; }
   .contacts-page .map-wrapper #map {
@@ -3388,24 +3425,23 @@ footer {
   .contacts-page .map-wrapper {
     height: 380px; } }
 @media only screen and (min-width:854px) {
-  .contacts-page .text-wrapper {
-    max-width: 280px; }
+  .contacts-page .text-wrapper .text {
+    width: 40%;
+    float: left;
+    padding: 0 24px 0 0; }
+  .contacts-page .text-wrapper .form-wrapper {
+    width: 60%;
+    float: right;
+    margin: -33px 0 0 0; }
+    .contacts-page .text-wrapper .form-wrapper form .wpcf7-response-output {
+      position: absolute;
+      bottom: 73px;
+      width: -webkit-calc(100% - 300px);
+      width: calc(100% - 300px);
+      text-align: right; }
   .contacts-page .map-wrapper {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: -webkit-calc(100% - 280px - 8px);
-    width: calc(100% - 280px - 8px);
-    padding: 0 0 0 50px; } }
-@media only screen and (min-width:1261px) {
-  .contacts-page .text-wrapper {
-    max-width: 315px; }
-  .contacts-page .map-wrapper {
-    width: -webkit-calc(100% - 315px - 8px);
-    width: calc(100% - 315px - 8px);
-    padding: 0 0 0 85px; } }
+    height: 480px; } }
+@media only screen and (min-width:1261px) { }
 
 .cart-wrapper .content-wrapper {
   overflow: hidden; }

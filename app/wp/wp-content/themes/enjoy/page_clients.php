@@ -29,15 +29,15 @@ if (have_posts()) :
 	<div class="row">
 		<div class="columns large-12 items-wrapper small-item">
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-01.svg" alt="">
 				<h4>Облаштування<br>інтер’єру</h4>
 			</div>
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-02.svg" alt="">
 				<h4>Розробка індивідуального<br>дизайну меблів</h4>
 			</div>
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-03.svg" alt="">
 				<h4>Нанесення фірмового<br>логотипу чи тексту УФ друком</h4>
 			</div>
 		</div>
@@ -95,19 +95,19 @@ foreach( $items as $item){
 	<div class="row">
 		<div class="columns large-12 items-wrapper small-item">
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-02.svg" alt="">
 				<h4>Довічне післяпродажне<br>обслуговування</h4>
 			</div>
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-04.svg" alt="">
 				<h4>Розробка індивідуального<br>дизайну меблів</h4>
 			</div>
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-05.svg" alt="">
 				<h4>Нанесення фірмового<br>логотипу чи тексту УФ друком</h4>
 			</div>
 			<div class="item">
-				<img src="<?php bloginfo('template_directory'); ?>/img/ico-3.png" alt="">
+				<img src="<?php bloginfo('template_directory'); ?>/img/clients/icons-06.svg" alt="">
 				<h4>Гнучка цінова<br>політика</h4>
 			</div>
 		</div>
