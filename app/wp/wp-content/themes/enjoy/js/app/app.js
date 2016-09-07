@@ -167,6 +167,59 @@
 			xparallax: '100%'
 		});
 	};
+	
+	// створення списку матеріалів		
+	function matList(options){
+		var div = '';
+		var i = 1;
+		options.each(
+			function(){
+				t = $(this).text();
+				v = $(this).val();
+				img = "http://bamb.loc/enjoy/app/wp/wp-content/themes/enjoy/pictures/materials/1.jpg";
+				if(v!=''){
+					div = div+'<div><span class="item" style="background:url('+img+') no-repeat center" data-img="'+img+'" data-select="'+v+'" data-item="item-'+i+'"></span><p>'+t+'</p></div>';					
+				}
+				i++;
+			});
+			$('.rainbow-materials').html(div);
+		}
+	matList($("#pa_material option"));
+	
+	// створення списку кольорів		
+	function colorList(options){
+		var div ='';
+		var i = 1;
+		options.each(
+			function(){
+				t = $(this).text();
+				v = $(this).val();
+				img = "http://bamb.loc/enjoy/app/wp/wp-content/themes/enjoy/pictures/materials/2.jpg";
+				if(v!=''){
+					div = div+'<div><span class="item" style="background:url('+img+') no-repeat center" data-img="'+img+'" data-item="item-'+i+'" data-select="'+v+'"></span><p>'+t+'</p></div>';
+				}
+				i++;
+			});
+			$('.rainbow-colors').html(div);
+		}
+	colorList($("#pa_kolory option"));
+	
+	// створення списку розмірів		
+	function rozmirList(options){
+		var div ='';
+		var i = 1;
+		options.each(
+			function(){
+				t = $(this).text();
+				v = $(this).val();
+				if(v!=''){
+					div = div+'<span data-select="'+v+'">'+t+'</span>';
+				}
+				i++;
+			});
+			$('.size-1').html(div);
+		}
+	rozmirList($("#pa_rozmiry option"));
 
 	// відкрити лист матеріалів чи кольору
 	function openMaterial() {
@@ -189,9 +242,13 @@
 
 	// обрати розмір
 	function chooseSize() {
-		$('.project .small-sizes .size-1 span').on('click', function() {
+		$('.project .small-sizes .size-1 span').on('click', function() {	
 			$('.project .small-sizes .size-1 span').removeClass('active');
 			$(this).addClass('active');
+			
+			var select = $(this).attr('data-select');
+			$("#pa_rozmiry").val(select).change();
+			//matList($("#pa_rozmiry option"));
 		});
 	};
 
@@ -227,7 +284,7 @@
 			calc+=fixedNum;
 		};
 	};
-
+	
 
 	function chooser() {
 		// вибір вигляду крісла
@@ -249,8 +306,6 @@
 		});
 
 		// вибір матеріалу
-				
-		
 		// (при кліку на превюшку)
 		$('.rainbow-materials div .item').on('click', function() {
 			var dataItem =  $(this).attr('data-item');
@@ -263,6 +318,10 @@
 			// заміна картинки
 			var material = $(this).attr('data-img');
 			$('.project .elect-materials').css('background', 'url(' + material + ')');
+			
+			var select = $(this).attr('data-select');
+			$("#pa_material").val(select).change();
+			//matList($("#pa_material option"));
 		});
 		// (при кліку на лист)
 		$('.elements-wrapper .materials .item').on('click', function() {
@@ -285,6 +344,10 @@
 			// заміна картинки
 			var material = $(this).attr('data-img');
 			$('.project .elect-colors').css('background', 'url(' + material + ')');
+			
+			var select = $(this).attr('data-select');
+			$("#pa_kolory").val(select).change();
+			//colorList($("#pa_kolory option"));
 		});
 		// (при кліку на лист)
 		$('.elements-wrapper .colors .item').on('click', function() {
@@ -347,17 +410,9 @@
 
 
 
-
-		
-	// створення списку матеріалів		
-	function matList(options){
+	$( 'form.variations_form' ).trigger(function(){ 
 		alert(1);
-		options.each(
-			function(){
-				t = $(this).val();
-				alert(1);
-			});
-		}
-	matList($("#pa_material option"));
+	});
+
 
 })();
