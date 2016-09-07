@@ -17,6 +17,7 @@
 	if(is_page_template( 'page_faq.php' )){echo'faq-page';}	
 	if(is_page_template( 'page_contact.php' )){ echo'contacts-page';}
 	if(is_page(63)){ echo'cart-wrapper';}
+	if(is_page(90)){ echo'clients-page';}
 	?>">
 <header>
 	<div class="header-wrapper">
