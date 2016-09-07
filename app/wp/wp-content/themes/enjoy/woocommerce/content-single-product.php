@@ -232,6 +232,7 @@ global $post, $product;
 									<p class="title">Матеріал</p>
 									<div class="wrapper">
 										<div class="elect elect-materials" style=""></div>
+										<div class="required_material" style="display:none;">Виберіть матеріал</div>
 										<div class="rainbow rainbow-materials">
 											
 											
@@ -242,14 +243,18 @@ global $post, $product;
 									<p class="title">Колір</p>
 									<div class="wrapper">
 										<div class="elect elect-colors" style=""></div>
+										<div class="required_colors" style="display:none;">Виберіть Колір</div>
 										<div class="rainbow rainbow-colors">
+										
 											
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="small-sizes">
+								<div class="required_sizes" style="display:none;    font-size: 16px;">Виберіть розмір</div>
 								<div class="size-1">
+								
 									
 								</div>
 								<div class="size-2">
